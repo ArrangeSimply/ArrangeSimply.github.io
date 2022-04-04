@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/arrangement.css" />
+    <script src="js/constant.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/function.js"></script>
+    <title>ArrangeSimply／简单编曲</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a>歌曲</a>
+          <ul>
+            <li>
+              <a href="page/gequ/dl.html">大陆</a>
+            </li>
+            <li>
+              <a href="page/gequ/xg.html">香港</a>
+            </li>
+            <li>
+              <a href="page/gequ/tw.html">台湾</a>
+            </li>
+            <li>
+              <a href="page/gequ/xjp.html">新加坡</a>
+            </li>
+            <li>
+              <a href="page/gequ/mlxy.html">马来西亚</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="page/uta.html">うた</a>
+        </li>
+        <li>
+          <a href="page/nolae.html">노래</a>
+        </li>
+        <li>
+          <a>Song</a>
+          <ul>
+            <li>
+              <a href="page/song/us.html">US</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1>简单编曲</h1>
+      <h1>ArrangeSimply</h1>
+    </header>
+    <main>
+      <article>
+        <h2>
+          <a href="page/gequ/xg.html#JZHQ">君子好逑</a>
+        </h2>
+        <section>
+<script>
+var latest = DATA.gequ;
+appendScore
+(
+    latest.classification.xg.main.JZHQ.section,
+//    ns.main.XHDDK.section,
+    document.getElementsByTagName(TAG.section)[FIRST]
+);
+</script>
+        </section>
+        <details open>
+          <summary>示范演奏</summary>
+          <audio controls>
+            <source src="audio/gequ/xg/JZHQ.mp3" type="audio/mpeg" />
+          </audio>
+          <!--summary>模範演奏Demo데모</summary>
+          <video controls>
+            <source src="video/gequ/tw/LDXYQ.mp4" type="video/mp4" />
+          </video-->
+        </details>
+      </article>
+    </main>
+    <aside>
+      <p>
+        《金装四大才子》的<a href="page/gequ/xg.html#JZHQ">主题歌</a>。旋律活泼轻快、歌词新颖独特！<br />
+        可惜的是专辑版里结束句的词儿不好？
+      </p>
+      <p>
+        由《四大才子》及其配偶的8位扮演者一起唱的，阵容强大！<br />
+        女声都唱得很好，很欢喜“然后世间优美动人”这句。论唱功和音色，肯定伶姐最好；娥姐和虹姐好像也出过专辑的；不过唱得最有感觉的反而是最不起眼的娴姐？最欢喜“美貌与智力也不重要”这句，“也不”唱得特有味道 (*^。^*)<br />
+        男声相对差了点儿？好像也就辉哥出过专辑；欧阳老师唱得还可以；剩下俩……
+      </p>
+      <p>
+        <a href="page/gequ/xg.html#Cs">小映老师</a>中意<a href="page/gequ/xg.html#JZHQ">这歌</a>，跟她合过几次 \(^○^)/<br />
+        <a href="page/gequ/xg.html#Cs">艾々老师</a>居然说太杂耍了铱钢，看来还是有代沟 (ಠ︵ಠ)
+      </p>
+      <p>
+        示范演奏中第一次尝试把男女俩声部分开来表现，效果还不错喔？
+      </p>
+      <p>
+        片尾曲由剧中的男女主角“唐伯虎”与“秋香”演唱，也蛮好听的，以后可能会介绍。
+      </p>
+    </aside>
+    <footer>
+      <small>
+<script>
+var prefix = "";
+switch (latest.language)
+{
+    case "en":
+    case "zh":
+        prefix = UP2;
+        break;
+    case "ja":
+    case "ko":
+        prefix = UP1;
+}
+var as = document.getElementsByTagName(TAG.small); // all SMALLs
+appendRecursively(prefix, DICTIONARY.footer[latest.language], as[as.length - 1]);
+</script>
+      </small>
+    </footer>
+  </body>
+</html>
