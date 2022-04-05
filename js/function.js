@@ -68,7 +68,13 @@ function normalizeTag(prefix, original, container)
 {
     switch (original[ELEMENT.tag])
     {
-        case TAG.BoALP: // [BoALP, between, ALP, ID]
+        case TAG.ALP: // [ALP, between, ALP]
+            return [
+                TAG.a,
+                original[ELEMENT.between],
+                getLink(prefix, PAGE, original[ELEMENT.ALP])
+            ];
+        case TAG.BoA: // [BoA, between, ALP, ID]
             return [
                 TAG.a,
                 original[ELEMENT.between],

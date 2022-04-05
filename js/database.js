@@ -346,7 +346,7 @@ const DATA =
                         h2: "玫瑰玫瑰我爱你",
                         preface:
                         [
-                            "据说传到美国、被", [TAG.BoALP, "翻唱", "song/us", "rrily"],
+                            "据说传到美国、被", [TAG.BoA, "翻唱", "song/us", "rrily"],
                             "后，美国人说什么也不相信是中国歌铱钢" + EMOJI.SURPRISE, PB,
                             "歌词是这样安排的：把原曲开头的两段拆开，分别放在副歌的前后，主歌各唱一段。", LB,
                             "高潮两段第1和第3句中的俩“心”，起唱点有两种，通过和弦的位置能看出来吧？" +
@@ -354,7 +354,7 @@ const DATA =
                             "两段第2句的最后一个音不同，要注意！通过和弦名也能看出来。第2遍也可以往高音处唱。" +
                             "如果唱高的话，最好停一小节再往下唱，否则显得太急？", LB,
                             "最后加了结束句，和原版不同。“爱”往高音处唱。", PB,
-                            "为了体现出老上海的味道，最好用", [TAG.BoALP, "爵士", "song/us", "rrily"], "风格来演奏！"
+                            "为了体现出老上海的味道，最好用", [TAG.BoA, "爵士", "song/us", "rrily"], "风格来演奏！"
                         ],
                         section:
                         {
@@ -412,8 +412,8 @@ const DATA =
                             "前后两段主歌的第4句及结束句，第2个和弦配得不同，主要是为了求变。都用同一个也行。", LB,
                             "Esus4/B的效果好像还不错哦？", LB,
                             "结束句中选择了不常用的3级大三和弦，用小三显得悲伤了。", PB,
-                            "以上是按照流行风来编配的；想感受", [TAG.BoALP, "爵士", "song/us", "rrily"],
-                            "味儿，请参考", [TAG.BoALP, "美版", "song/us", "rrily"], "。"
+                            "以上是按照流行风来编配的；想感受", [TAG.BoA, "爵士", "song/us", "rrily"],
+                            "味儿，请参考", [TAG.BoA, "美版", "song/us", "rrily"], "。"
                         ],
                         details:
                         {
@@ -721,7 +721,8 @@ const DATA =
                         h2: "天地豪情",
                         preface:
                         [
-                            "香港武打片《南拳北腿》的主题歌，但应该算是马来西亚歌。", PB,////////link!!!!!
+                            "不是香港时装剧，而是武打片《南拳北腿》的主题歌，但应该算是",
+                            [TAG.ALP, "马来西亚歌", "gequ/mlxy"], "。", PB,
                             "主歌第1段第4句和第2段第1句里都有“长”，离得太近！所以把后一个改成“在”。", LB,
                             "两段主歌的最后一句，比其它小节要少一半。", LB,
                             "《专辑》里最后一遍副歌中，两段第1句的歌词和旋律都有变化。其中“天地是太多苦困”好像不通？把“是”改成“有”？", LB,
@@ -958,7 +959,7 @@ const DATA =
                                 "不是单纯一个“岛”字儿，后面要“哦噢喔”！没有转音，那属于唱得差的。", LB,
                                 "同样地，“摇呀摇”和“飘呀飘”的“呀”，最好也转一下。不过和“岛”相比，就没那么明显、那么重要了。", LB,
                                 "有些版本里“那微风”或“吹开了”也…… 看歌手自己发挥了。"/*, PB,
-                                "示范演奏请参考", [TAG.BoALP, "日版", "uta", "otmgkrnamgfr"],///
+                                "示范演奏请参考", [TAG.BoA, "日版", "uta", "otmgkrnamgfr"],///
                                 "。"*/
                             ]
                         }
@@ -1284,7 +1285,7 @@ const DATA =
                         h2: "谍海危情",
                         preface:
                         [
-                            "汤尼老师写的，其实是台湾歌！", LB,
+                            "汤尼老师写的，其实是", [TAG.ALP, "台湾歌", "gequ/tw"], "。", LB,
                             "词儿像七言律诗？曲儿则有点儿戏曲的味道？", LB,
                             "前奏和主歌是小调，副歌转大调。", PB,
                             "主歌两段旋律一样，所以省略了第1段。", LB,
@@ -1749,7 +1750,7 @@ const DATA =
                         preface:
                         [
                             "It has been said that Americans do not believe that this is a ",
-                            [TAG.BoALP, "Chinese song", "gequ/dl", "MGMGWAN"],
+                            [TAG.BoA, "Chinese song", "gequ/dl", "MGMGWAN"],
                             ", whose title has the same meaning as the English one" + EMOJI.SURPRISE, PB,
                             "The paragraphs in the same melodies are omitted. The ending lyrics are changed."
                         ],

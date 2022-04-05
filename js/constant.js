@@ -254,7 +254,8 @@ const TAG =
     ul: "ul",
     video: "video",
 // derivatives
-    BoALP: "BoALP", // Bookmark on Another Local Page
+    ALP: "ALP", // Another Local Page
+    BoA: "BoA", // Bookmark on ALP
     CHORD: "CHORD",
     Cs: "Cs", // COLLABORATORs
     HP: "HP", // return to the home page
@@ -509,7 +510,7 @@ const DICTIONARY =
                 [
                     "天才採譜：艾々",
                     "模範演奏：中宝",
-                    "音楽顧問：東山直、乐々；小红",///泰さん
+                    "音楽顧問：東山直、乐々；小紅",///泰さん
                     ///"画面設計：阿超",
                     "技術協力：小布、大帝、奔兒",
                     "方言指導：小映、小聡；艾々、中宝",
