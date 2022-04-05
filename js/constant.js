@@ -106,6 +106,7 @@ const bBM7 = {R: "K2", T: M7};
 const bBadd9 = {R: "K2", T: add9};
 const Bm = {R: "L0", T: m};
 const BmD = {R: "L0", T: m, B: "C0"};
+const BmFs = {R: "L0", T: m, B: "G1"};
 const Bm7 = {R: "L0", T: m7};
 const Bm7A = {R: "L0", T: m7, B: "J0"};
 const Bsus4 = {R: "L0", T: sus4};
@@ -149,8 +150,10 @@ const Dm7 = {R: "C0", T: m7};
 const Dm7A = {R: "C0", T: m7, B: "J0"};
 const Dm7C = {R: "C0", T: m7, B: "A0"};
 const Dsus2 = {R: "C0", T: sus2};
+const Dsus2E = {R: "C0", T: sus2, B: "E0"};
 const Dsus4 = {R: "C0", T: sus4};
 const Dsus4A = {R: "C0", T: sus4, B: "J0"};
+const D6sus4 = {R: "C0", T: sus46};
 const D7sus2 = {R: "C0", T: sus27};
 const D7sus2C = {R: "C0", T: sus27, B: "A0"};
 const D7sus4 = {R: "C0", T: sus47};
@@ -409,8 +412,8 @@ const DICTIONARY =
                 [
                     "Notation: Ai-ai",
                     "Demonstration: Bao",
-                    "Music advisors: Tiger, JasonPowders",
-                    "Page designer: Chao",
+                    "Music advisors: JasonPowders, Lele; Red",///Tiger
+                    ///"Page designer: Chao",
                     "Tech support: Jay, Imperator, Ben",
                     "Dialect guiders: Vivian, Cong; Ai-ai, Bao",
                     "Translator: Ben; Vivian",
@@ -506,8 +509,8 @@ const DICTIONARY =
                 [
                     "天才採譜：艾々",
                     "模範演奏：中宝",
-                    "音楽顧問：泰さん、東山直",
-                    "画面設計：阿超",
+                    "音楽顧問：東山直、乐々；小红",///泰さん
+                    ///"画面設計：阿超",
                     "技術協力：小布、大帝、奔兒",
                     "方言指導：小映、小聡；艾々、中宝",
                     "外語翻訳：奔兒；小映",
@@ -620,8 +623,8 @@ const DICTIONARY =
                 [
                     "天才记谱：艾々",
                     "示范演奏：中宝",
-                    "音乐顾问：泰哥、东山直",
-                    "页面设计：阿超",
+                    "音乐顾问：东山直、乐々；小红",///泰哥
+                    ///"页面设计：阿超",
                     "技术支持：小布、大帝、奔儿",
                     "方言指导：小映、小聪；艾々、中宝",
                     "外语翻译：奔儿；小映",
