@@ -12,88 +12,77 @@ const DATA =
                 header: {h1: "大陆歌"},
                 main:
                 {
-                    YAtM:
+                    HY:
                     {
-                        cover: "en",
-                        h2: "You Are the Miracle",
+                        h2: "火焰",
                         preface:
                         [
-                            "With 100 days to go before the Beijing 2022 Winter Olympics, " +
-                            "the first English song for the Olympics was released, " +
-                            "which is the cover of a pleasant Chinese song - You Look Nice When Smiling."
+                            "有几处和片头字幕不同：", LB,
+                            "“……里（的）一束……”，多了个“的”；", LB,
+                            "哦→噢……；", LB,
+                            "“……到永（永远）远”，没写叠词。", PB,
+                            "“不知不觉成为你的永远”中有两处用词重复，要改！", LB,
+                            "“成为”上一句用过了；“永远”前后都用了。", PB,
+                            "主歌第3句的第1个字儿，起唱点儿不一样——第2段比第1段早唱一拍。"
                         ],
                         section:
                         {
                             score:
                             [
                                 {
-                                    original: "D2",
-                                    arranged: "A0",
+                                    original: "A0",
                                     chords:
                                     [
                                         [
-                                            {1: C, 20: G},
-                                            {1: Cadd9, 18: CE},
-                                            {1: Am, 20: G6},
-                                            {1: Dm7, 16: G}
+                                            {1: Csus2G, 5: Dm7A, 9: Dsus2},
+                                            {1: FM7, 4: [FWS, Am], 9: Fadd9, 12: [FWS, Gsus4]},
+                                            {3: EmB, 10: D7sus2A},
+                                            {4: FM7, 11: [FWS, G7]}
                                         ],
                                         [
-                                            {1: C, 17: Gsus4},
-                                            {1: AmC, 19: G6},
-                                            {1: F, 17: G6},
-                                            {1: Dm7, 9: Gsus24, 20: C}
+                                            {1: Csus2G, 5: Dm7A, 9: Dsus2},
+                                            {1: FM7, 4: [FWS, Am], 8: Fadd9},
+                                            {0: Gsus4, 3: EmB, 10: D7sus2A},
+                                            {4: FM7, 11: [FWS, G7]}
                                         ],
                                         [
-                                            {1: C, 15: Gsus4D},
-                                            {8: Am, 26: CG},
-                                            {5: Fadd9, 18: G6},
-                                            {1: Asus4, 18: GD}
-                                        ],
-                                        [
-                                            {1: C, 15: Gsus4D},
-                                            {3: Am7, 18: G},
-                                            {1: Fadd9, 26: G6},
-                                            {1: Asus4, 13: Gsus4D, 17: C}
+                                            {4: C, 12: [FWS, G6]},
+                                            {1: FM7C, 8: Dsus2, 11: [FWS, Am7E]},
+                                            {4: C, 12: [FWS, G6]},
+                                            {1: FM7C, 9: AmE, 12: [FWS, C]}
                                         ]
                                     ]
                                 }
                             ],
                             lyrics:
                             [
-                                "Cross the mountain  cross the sea",
-                                "Winter Games are in Beijing",
-                                "Gather 'round with all your friends",
-                                "Join us in the snow",
-                                "Work your magic on the slope",
-                                "Having fun in the shining rink",
-                                "Hear the voices in your heart",
-                                "Time to claim your crown",
-                                "Welcome to Beijing",
-                                "We're about to give it a go",
-                                "The Olympics are magical",
-                                "Passion's set to grow",
-                                "Welcome to Beijing",
-                                "Together  we will glow",
-                                "Share your smiles in the winter world",
-                                "You are the miracle"
+                                "渴望在我生命里的每一个冬天",
+                                "依偎在你 温柔的胸膛里面",
+                                "忘了所有悲伤 所有疲倦",
+                                "就这样抱着你 直到永远",
+                                "想要成为你生命里一束火焰",
+                                "不知不觉 成为你的永远",
+                                "再也没有忧伤 没有慌张",
+                                "就这样幸福着 直到永远",
+                                "噢噢噢 你是我的依恋 我是你的爱恋",
+                                "每天每天相守 不会厌倦",
+                                "噢噢噢 我是你的春天 你是我的火焰",
+                                "岁岁年年相守 到永永远远"
                             ]
                         },
                         postscript:
                         [
-                            "The song is arranged in the key of C, " +
-                            "but it seems not difficult in D, which is closer to the original key.", PB,
-                            "Some of the chords in the 1st paragraph are distinguished " +
-                            "from those in the 2nd one (same as the 3rd and 4th paragraph) " +
-                            "because the melodies are a bit different."
+                            "主歌和弦不难配，但节奏不太好选？", LB,
+                            "副歌配起来就讨厌了？"
                         ],
                         details:
                         {
                             demo: TAG.audio,
                             comment:
                             [
-                                "The demo was arranged on the basis of the Chinese version.", LB,
-                                "The interlude of the original into which several chords had been inserted " +
-                                "was played as the postlude of the demo."
+                                "前奏很吸引人！几个简单的和弦，也能编出好的旋律" + EMOJI.SURPRISE, LB,
+                                "前半部分可当尾奏用；后半部分可用于间奏，但要弹两遍，第2遍的最后一小节有点儿变化。", PB,
+                                "多处用到琶音。用与不用，效果还真不一样哦？"
                             ]
                         }
                     },
@@ -425,6 +414,91 @@ const DATA =
                             ]
                         }
                     },
+                    YAtM:
+                    {
+                        cover: "en",
+                        h2: "You Are the Miracle",
+                        preface:
+                        [
+                            "With 100 days to go before the Beijing 2022 Winter Olympics, " +
+                            "the first English song for the Olympics was released, " +
+                            "which is the cover of a pleasant Chinese song - You Look Nice When Smiling."
+                        ],
+                        section:
+                        {
+                            score:
+                            [
+                                {
+                                    original: "D2",
+                                    arranged: "A0",
+                                    chords:
+                                    [
+                                        [
+                                            {1: C, 20: G},
+                                            {1: Cadd9, 18: CE},
+                                            {1: Am, 20: G6},
+                                            {1: Dm7, 16: G}
+                                        ],
+                                        [
+                                            {1: C, 17: Gsus4},
+                                            {1: AmC, 19: G6},
+                                            {1: F, 17: G6},
+                                            {1: Dm7, 9: Gsus24, 20: C}
+                                        ],
+                                        [
+                                            {1: C, 15: Gsus4D},
+                                            {8: Am, 26: CG},
+                                            {5: Fadd9, 18: G6},
+                                            {1: Asus4, 18: GD}
+                                        ],
+                                        [
+                                            {1: C, 15: Gsus4D},
+                                            {3: Am7, 18: G},
+                                            {1: Fadd9, 26: G6},
+                                            {1: Asus4, 13: Gsus4D, 17: C}
+                                        ]
+                                    ]
+                                }
+                            ],
+                            lyrics:
+                            [
+                                "Cross the mountain  cross the sea",
+                                "Winter Games are in Beijing",
+                                "Gather 'round with all your friends",
+                                "Join us in the snow",
+                                "Work your magic on the slope",
+                                "Having fun in the shining rink",
+                                "Hear the voices in your heart",
+                                "Time to claim your crown",
+                                "Welcome to Beijing",
+                                "We're about to give it a go",
+                                "The Olympics are magical",
+                                "Passion's set to grow",
+                                "Welcome to Beijing",
+                                "Together  we will glow",
+                                "Share your smiles in the winter world",
+                                "You are the miracle"
+                            ]
+                        },
+                        postscript:
+                        [
+                            "The song is arranged in the key of C, " +
+                            "but it seems not difficult in D, which is closer to the original key.", PB,
+                            "Some of the chords in the 1st paragraph are distinguished " +
+                            "from those in the 2nd one (same as the 3rd and 4th paragraph) " +
+                            "because the melodies are a bit different."
+                        ],
+                        details:
+                        {
+                            demo: TAG.audio,
+                            comment:
+                            [
+                                "The demo was arranged on the basis of the Chinese version.", LB,
+                                "The interlude of the original into which several chords had been inserted " +
+                                "was played as the postlude of the demo."
+                            ]
+                        }
+                    },
                     YYCYZ:
                     {
                         h2: "烟雨唱扬州",
@@ -567,7 +641,7 @@ const DATA =
                             demo: TAG.audio,
                             comment:
                             [
-                                "前奏中尝试着用了“波浪音（是叫这名儿吗？）”" + EMOJI.SHY, PB,
+                                "前奏中用了琶音" + EMOJI.SHY, PB,
                                 "为了方便记谱，示范中把小节长度作了统一。", PB,
                                 "两段副歌第1句的两种变化放在一起分前后两段表现出来，与原版不同。", LB,
                                 "第2句叠词中没加小转音，加了效果反而不好。"
