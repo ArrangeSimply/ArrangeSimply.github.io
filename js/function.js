@@ -257,10 +257,10 @@ function appendChord(chord, container)
     var collection = [];
     var eSMALL;
     var st = ""; // small text
-    appendNote(CHORD.R, chord, collection, container);
+    appendNote(CHORD.R, chord, collection, container);/////reverse note directly???
     if (CHORD.T in chord)
     {
-        if (m === chord.T) appendText(m, container);
+        if (m === chord.T) appendText(m, container);/////m7b5???
         else
         {
             if (m === chord.T[FIRST])

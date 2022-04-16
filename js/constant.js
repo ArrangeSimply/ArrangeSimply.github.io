@@ -1,6 +1,6 @@
 // keys
 const ACCIDENTAL =
-{
+{ // (NATURA)L
     P: "\u266F", // (SHAR)P
     T: "\u266D", // (FLA)T
     NATURAL: 0,
@@ -14,7 +14,7 @@ const KEY =
     TONALITY:
     {
 // major key & scale
-        A0: "CL", // (NATURA)L, same as below
+        A0: "CL",
         B1: "CP",
         B2: "DT",
         C0: "DL",
@@ -95,10 +95,12 @@ const Am7 = {R: "J0", T: m7};
 const Am7E = {R: "J0", T: m7, B: "E0"};
 const Am7G = {R: "J0", T: m7, B: "H0"};
 const Asus2 = {R: "J0", T: sus2};
+const Asus2E = {R: "J0", T: sus2, B: "E0"};
 const Asus24 = {R: "J0", T: sus24};
 const Asus4 = {R: "J0", T: sus4};
 const A6sus4 = {R: "J0", T: sus46};
 const A7sus2 = {R: "J0", T: sus27};
+const A7sus2E = {R: "J0", T: sus27, B: "E0"};
 const A7sus4 = {R: "J0", T: sus47};
 const bB = {R: "K2"};
 const bBF = {R: "K2", B: "F0"};
@@ -150,10 +152,10 @@ const Dm7 = {R: "C0", T: m7};
 const Dm7A = {R: "C0", T: m7, B: "J0"};
 const Dm7C = {R: "C0", T: m7, B: "A0"};
 const Dsus2 = {R: "C0", T: sus2};
-const Dsus2E = {R: "C0", T: sus2, B: "E0"};
+const Dsus2A = {R: "C0", T: sus2, B: "J0"};
 const Dsus4 = {R: "C0", T: sus4};
 const Dsus4A = {R: "C0", T: sus4, B: "J0"};
-const D6sus4 = {R: "C0", T: sus46};
+const D6sus4A = {R: "C0", T: sus46, B: "J0"};
 const D7sus2 = {R: "C0", T: sus27};
 const D7sus2C = {R: "C0", T: sus27, B: "A0"};
 const D7sus4 = {R: "C0", T: sus47};
