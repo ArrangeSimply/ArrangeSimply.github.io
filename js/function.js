@@ -136,27 +136,27 @@ function appendRecursively(prefix, content, container)
             }
 }
 // transposition
-function convert2ASCII(string)
+function convert2ASCII(tone)
 {
-    return string.charCodeAt(KEY.TONIC);
+    return tone.charCodeAt(KEY.ET);
 }
 function limit2interval(number, left, right) // interval notation: [left-endpoint, right-endpoint]
 {
-    if (number < left) return number + TRANSPOSITION.ET;
-    else if (number > right) return number - TRANSPOSITION.ET;
+    if (number < left) return number + TRANSPOSITION.TET12;
+    else if (number > right) return number - TRANSPOSITION.TET12;
     else return number;
 }
-function changeTonic(tonic, offset, left, right)
+function changeTone(tone, offset, left, right)
 {
-    return String.fromCharCode(limit2interval(convert2ASCII(tonic) + offset, left, right)); // converted to char finally
+    return String.fromCharCode(limit2interval(convert2ASCII(tone) + offset, left, right)); // converted to char finally
 }
 function changeMajorKey(key, offset)
 {
-    return changeTonic(key, offset, TRANSPOSITION.A, TRANSPOSITION.L);
+    return changeTone(key, offset, TRANSPOSITION.A, TRANSPOSITION.L);
 }
 function reverseNote(name)
 {
-    return name[KEY.ACCIDENTAL] + name[KEY.TONIC];
+    return name[KEY.SOLFEGE] + name[KEY.ACCIDENTAL];
 }
 function appendSpecialString(text, container) // transformed into special characters if necessary
 {
@@ -180,7 +180,7 @@ function appendSpecialString(text, container) // transformed into special charac
 function transpose(offset, transposition)
 {
     var current = ""; // current key
-    var tonic = "";
+    var tone = "";
     var accidental = "";
     var transposed = ""; // transposed note
     var t = {};
@@ -188,12 +188,12 @@ function transpose(offset, transposition)
     for (t of transposition)
     {
         if (/[A-L]/.test(t.original)) current = changeMajorKey(t.arranged, offset);
-        else current = changeTonic(t.arranged, offset, TRANSPOSITION.a, TRANSPOSITION.l);
+        else current = changeTone(t.arranged, offset, TRANSPOSITION.a, TRANSPOSITION.l);
         for (tc of t.collection)
         {
             removeAllChildren(tc.element);
-            tonic = changeMajorKey(tc.note, offset);
-            if (tonic + ACCIDENTAL.NATURAL in KEY.TONALITY) accidental = ACCIDENTAL.NATURAL;
+            tone = changeMajorKey(tc.et, offset);
+            if (tone + ACCIDENTAL.NATURAL in KEY.TONALITY) accidental = ACCIDENTAL.NATURAL;
             else
                 switch (current)
                 {
@@ -213,9 +213,8 @@ function transpose(offset, transposition)
                     case "G": case "g": // F♯ ~ d♯
                         accidental = ACCIDENTAL.SHARP;
                 }
-            transposed = KEY.TONALITY[tonic + accidental];
-            if (CHORD.R === tc.lowest) transposed = reverseNote(transposed);
-            appendSpecialString(transposed, tc.element);
+            transposed = KEY.TONALITY[tone + accidental];
+            appendSpecialString(CHORD.B === tc.ln ? reverseNote(transposed) : transposed, tc.element);
         }
     }
 }
@@ -246,18 +245,25 @@ function getPage(url)
     page.addition.language = DATA[page.addition.top].language;
     return page;
 }
-function appendNote(position, chord, collection, container)
+function appendNote(note, tone, position, collection, container)
 {
     var eSPAN = appendTag(TAG.span, container);
-    appendSpecialString(CHORD.B === position ? KEY.TONALITY[chord.B] : reverseNote(KEY.TONALITY[chord.R]), eSPAN);
-    collection.push({element: eSPAN, note: chord[position], lowest: position}); // position of the lowest note
+    appendSpecialString(note, eSPAN);
+    collection.push
+    (
+        {
+            element: eSPAN,
+            et: tone, // equal temperament
+            ln: position // position of the lowest note
+        }
+    );
 }
 function appendChord(chord, container)
 {
     var collection = [];
     var eSMALL;
     var st = ""; // small text
-    appendNote(CHORD.R, chord, collection, container);/////reverse note directly???
+    appendNote(KEY.TONALITY[chord.R], chord.R, CHORD.R, collection, container);
     if (CHORD.T in chord)
     {
         if (m === chord.T) appendText(m, container);/////m7b5???
@@ -276,7 +282,7 @@ function appendChord(chord, container)
     if (CHORD.B in chord)
     {
         appendText("/", container);
-        appendNote(CHORD.B, chord, collection, container);
+        appendNote(reverseNote(KEY.TONALITY[chord.B]), chord.B, CHORD.B, collection, container);
     }
     return collection;
 }
@@ -359,13 +365,13 @@ function appendScore(section, container)
     }
     return transposition;
 }
-function appendParagraph(prefix, type, parent, container)
+function appendParagraph(prefix, which, parent, container) // preface, postscript or comment
 {
     var eP;
-    if (type in parent)
+    if (which in parent)
     {
         eP = appendTag(TAG.p, container);
-        appendRecursively(prefix, parent[type], eP);
+        appendRecursively(prefix, parent[which], eP);
     }
 }
 function appendSection(section, language, container)
@@ -376,19 +382,19 @@ function appendSection(section, language, container)
     var eSELECT;
     var eOPTION;
     var keys = {original: "", arranged: ""};
-    var type = ""; // original or arranged key
+    var which = ""; // original or arranged key
     var key = "";
     var i;
     var transposition = appendScore(section, eSECTION);
     var t = transposition[FIRST]; // used as the 1st item, or each one of "transposition"
     var difference = limit2interval // difference between arranged & original key
-                (convert2ASCII(t.arranged) - convert2ASCII(t.original), TRANSPOSITION.MIN, TRANSPOSITION.MAX);
+                        (convert2ASCII(t.arranged) - convert2ASCII(t.original), TRANSPOSITION.MIN, TRANSPOSITION.MAX);
 // key
     for (t of transposition) // join keys with arrow if necessary
-        for (type in keys) keys[type] += KEY.TONALITY[t[type]] + ARROW;
-    for ([type, key] of Object.entries(keys))
+        for (which in keys) keys[which] += reverseNote(KEY.TONALITY[t[which]]) + ARROW;
+    for ([which, key] of Object.entries(keys))
     {
-        eDT = appendDTwithCOLON(type, language, eDL);
+        eDT = appendDTwithCOLON(which, language, eDL);
         appendSpecialString(key.slice(0, -1), eDT);
     }
 // transposition

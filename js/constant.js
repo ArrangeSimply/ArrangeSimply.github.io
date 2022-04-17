@@ -9,41 +9,42 @@ const ACCIDENTAL =
 };
 const KEY =
 {
-    TONIC: 0, // major: A~L, A~G; minor: a~l, a~g
-    ACCIDENTAL: 1, // 0, 1, 2; L, P, T
+    ET: 0, // equal temperament (major: A~L; minor: a~l)
+    ACCIDENTAL: 0, // L, P, T
+    SOLFEGE: 1, // solfège (major: A~G; minor: a~g)
     TONALITY:
     {
 // major key & scale
-        A0: "CL",
-        B1: "CP",
-        B2: "DT",
-        C0: "DL",
-        D1: "DP",
-        D2: "ET",
-        E0: "EL",
-        F0: "FL",
-        G1: "FP",
-        G2: "GT",
-        H0: "GL",
-        I1: "GP",
-        I2: "AT",
-        J0: "AL",
-        K1: "AP",
-        K2: "BT",
-        L0: "BL",
+        A0: "LC",
+        B1: "PC",
+        B2: "TD",
+        C0: "LD",
+        D1: "PD",
+        D2: "TE",
+        E0: "LE",
+        F0: "LF",
+        G1: "PF",
+        G2: "TG",
+        H0: "LG",
+        I1: "PG",
+        I2: "TA",
+        J0: "LA",
+        K1: "PA",
+        K2: "TB",
+        L0: "LB",
 // minor key
-        a0: "aL",
-        b2: "bT",
-        c0: "bL",
-        d0: "cL",
-        e1: "cP",
-        f0: "dL",
-        g1: "dP",
-        h0: "eL",
-        i0: "fL",
-        j1: "fP",
-        k0: "gL",
-        l1: "gP"
+        a0: "La",
+        b2: "Tb",
+        c0: "Lb",
+        d0: "Lc",
+        e1: "Pc",
+        f0: "Ld",
+        g1: "Pd",
+        h0: "Le",
+        i0: "Lf",
+        j1: "Pf",
+        k0: "Lg",
+        l1: "Pg"
     }
 }
 const TRANSPOSITION =
@@ -52,7 +53,7 @@ const TRANSPOSITION =
     L: 76, // ASCII of L
     a: 97, // ASCII of a
     l: 108, // ASCII of l
-    ET: 12, // 12-tone equal temperament
+    TET12: 12, // 12-tone equal temperament
     MAX: 5, // upper bound of changeable keys
     MIN: -6 // lower bound of changeable keys
 }
@@ -119,8 +120,8 @@ const Dsus4 = {R: "C0", T: sus4};
 const Dsus4A = {R: "C0", T: sus4, B: "J0"};
 const D6sus4A = {R: "C0", T: sus46, B: "J0"};
 const D7sus2 = {R: "C0", T: sus27};
-const D7sus2A = {R: "C0", T: sus27, B: "J0"};
 const D7sus2C = {R: "C0", T: sus27, B: "A0"};
+const D7sus2A = {R: "C0", T: sus27, B: "J0"};
 const D7sus4 = {R: "C0", T: sus47};
 const Daug = {R: "C0", T: aug};
 const E = {R: "E0"};
@@ -208,7 +209,7 @@ const Bm7 = {R: "L0", T: m7};
 const Bm7A = {R: "L0", T: m7, B: "J0"};
 const Bsus4 = {R: "L0", T: sus4};
 const B7sus2 = {R: "L0", T: sus27};
-const B7sus2A = {R: "L0", T: sus27, B: "J0"};
+const B7sus2Fs = {R: "L0", T: sus27, B: "G1"};
 const B7sus4 = {R: "L0", T: sus47};
 const Bm7b5 = {R: "L0", T: m7b5};
 // space
@@ -293,7 +294,7 @@ const EMOJI =
     SHY: " (*^▽^*)",
     SMILE: " \\(^○^)/",
     SURPRISE: " (ﾉﾟοﾟ)ﾉ",
-    UNHAPPY: " (ಠ︵ಠ)"
+    UNHAPPY: " (ಠ︵ಠ)"/////
 };
 const FIRST = 0;
 const PAGE = "page";
