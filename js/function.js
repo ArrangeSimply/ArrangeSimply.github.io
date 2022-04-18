@@ -266,10 +266,10 @@ function appendChord(chord, container)
     appendNote(KEY.TONALITY[chord.R], chord.R, CHORD.R, collection, container);
     if (CHORD.T in chord)
     {
-        if (m === chord.T) appendText(m, container);/////m7b5???
+        if (m === chord.T) appendText(m, container);
         else
         {
-            if (m === chord.T[FIRST])
+            if (m === chord.T[FIRST] && m7b5 !== chord.T)
             {
                 appendText(m, container);
                 st = chord.T.slice(1);

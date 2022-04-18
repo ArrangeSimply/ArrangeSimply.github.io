@@ -291,10 +291,10 @@ const EMOJI =
     AWKWARD: " <^_^!>",
     CRY: " (T○T)",
     LOVE: " (*^。^*)",
+    SAD: " (ಠ︵ಠ)",
     SHY: " (*^▽^*)",
     SMILE: " \\(^○^)/",
-    SURPRISE: " (ﾉﾟοﾟ)ﾉ",
-    UNHAPPY: " (ಠ︵ಠ)"/////
+    SURPRISE: " (ﾉﾟοﾟ)ﾉ"
 };
 const FIRST = 0;
 const PAGE = "page";
