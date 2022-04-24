@@ -395,7 +395,7 @@ function appendSection(section, language, container)
     for ([which, key] of Object.entries(keys))
     {
         eDT = appendDTwithCOLON(which, language, eDL);
-        appendSpecialString(key.slice(0, -1), eDT);
+        appendSpecialString(key.slice(0, -1), eDT); // remove the last ARROW
     }
 // transposition
     eDT = appendDTwithCOLON("transpose", language, eDL);
