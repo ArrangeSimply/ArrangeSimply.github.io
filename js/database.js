@@ -19,7 +19,8 @@ const DATA =
                         [
                             "作曲者好像不太出名，几乎查不到资料。", LB,
                             "最大似然估计是", [TAG.ALP, "香港歌", "gequ/xg"], "。", PB,
-                            "半音还是不少的，要唱到位！"
+                            "主歌里有几句好像《圣斗士》？", LB,
+                            "“刹（那）”大多数人都念错！"
                         ],
                         section:
                         {
@@ -46,7 +47,7 @@ const DATA =
                                             {0: Bsus4, 4: EmG, 9: BmFs},
                                             {2: GM9B, 6: [FWS, Em7]},
                                             {3: CM7},
-                                            {1: AmE, 2: DFs, 3: GM7, 4: Bsus4Fs, 5: Badd11, 9: EmM7, 10: Em}
+                                            {1: Am7, 2: D7, 3: GM7, 4: Bsus4Fs, 5: Badd11, 9: EmM7, 10: Em}
                                         ]
                                     ]
                                 }
@@ -266,7 +267,7 @@ const DATA =
                         [
                             "有几处和片头字幕不同：",
                             [
-                                TAG.ul,///css
+                                TAG.ul,
                                 [
                                     "“……里（的）一束……”，多了个“的”。",
                                     [
@@ -376,7 +377,7 @@ const DATA =
                                             {0: BmD, 4: DA, 5: BmD, 9: DA},
                                             {0: GM7, 4: Em, 5: Bm7, 9: AE},
                                             {0: BmD, 4: DA, 5: BmD, 9: DA},
-                                            {0: GM7, 4: Esus2, 6: Asus24, 10: D}
+                                            {0: GM7, 4: Esus2, 6: G, 10: D}
                                         ]
                                     ]
                                 }
@@ -521,7 +522,7 @@ const DATA =
                                             {1: C, 17: Gsus4},
                                             {1: AmC, 19: G6},
                                             {1: F, 17: G6},
-                                            {1: Dm7, 9: Gsus24, 20: C}
+                                            {1: Dm7, 9: F, 20: C}
                                         ],
                                         [
                                             {1: C, 15: Gsus4D},

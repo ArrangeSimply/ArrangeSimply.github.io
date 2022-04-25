@@ -83,44 +83,49 @@ main
     margin-left: 15%; /* width of nav */
     width: 60%;
 }
-article
+main article
 {
     margin: 0 8px 8px;
     padding: 1em;
     background-color: honeyDew;
 }
-article h2
+main article h2
 {
     margin: 0;
     border-bottom: 1px solid deepPink;
     border-left: 16px solid deepPink;
     padding-left: 0.5em;
 }
-article h2 a
+main article h2 a
 {
     text-decoration: none; /* remove underline */
 }
-article section
+main article p ul
+{
+    margin-top: 0;
+    padding-left: 1em;
+}
+main article section
 {
     text-align: center;
 }
-article section dl
+main article section dl
 {
     margin: 2em 0 0;
 }
-article section dl dt
+main article section dl dt
 {
     display: inline-block;
     width: 25%;
 }
-article section pre
+main article section pre
 {
     display: inline-block;
     text-align: left;
     font-size: x-large;
     color: purple;
 }
-summary
+main article details summary
 {
     color: chocolate;
 }
