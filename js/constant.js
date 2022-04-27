@@ -426,7 +426,7 @@ const DICTIONARY =
                 [
                     "Notation: Ai-ai",
                     "Demonstration: Bao",
-                    "Music advisors: JasonPowders, Lele; Red",///Tiger
+                    "Music advisors: JasonPowders, Happy; Red",///Tiger
                     ///"Page designer: Chao",
                     "Tech support: Jay, Imperator, Ben",
                     "Dialect guiders: Vivian, Cong; Ai-ai, Bao",
@@ -671,16 +671,17 @@ const DICTIONARY =
         en:
         [
             "Thank you for your visit to our site.", PB,
-            "A front-end framework is being provided for enthusiasts of music or programming " +
-            "to create chord-scores conveniently. " +
+            "A front-end framework is being provided for enthusiasts of music and programming " +
+            "to create chord-scores conveniently.", LB,
             "Thus our site is not the one to inquire for musical scores.", LB,
-            "All of the scores and multimedia available at our site are used to test the framework. " +
+            "All of the scores and multimedia available at our site are used to test the framework.", LB,
             "Please do not reprint them!"
         ],
         ja:
         [
-            "わざわざ本サイトをご覧いただき、誠にありがとうございます！", PB,
-            "音楽かプログラミング愛好者のため、コード譜が楽に作成できるフロント・エンド・フレームワークを実装してみました。", PB,
+            "わざわざご覧いただき、誠にありがとうございます！", PB,
+            "音楽とプログラミング愛好者のため、コード譜が楽に作成できるフロント・エンド・フレームワークを実装してみました。", LB,
+            "楽譜を検索するため、本サイトの利用はご遠慮ください。", PB,
             "歌詞は掲載しかねます。"///
         ],
         ko:
