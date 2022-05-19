@@ -155,10 +155,12 @@ const FM7C = {R: "F0", T: M7, B: "A0"};
 const Fadd9 = {R: "F0", T: add9};
 const Fadd9A = {R: "F0", T: add9, B: "J0"};
 const sFm = {R: "G1", T: m};
+const sFmCs = {R: "G1", T: m, B: "B1"};
 const sFmA = {R: "G1", T: m, B: "J0"};
 const sFm7 = {R: "G1", T: m7};
 const sFm7Cs = {R: "G1", T: m7, B: "B1"};
 const sFm7E = {R: "G1", T: m7, B: "E0"};
+const sF7sus4 = {R: "G1", T: sus47};
 const G = {R: "H0"};
 const GD = {R: "H0", B: "C0"};
 const GB = {R: "H0", B: "L0"};
@@ -212,6 +214,7 @@ const BmD = {R: "L0", T: m, B: "C0"};
 const BmFs = {R: "L0", T: m, B: "G1"};
 const Bm7 = {R: "L0", T: m7};
 const Bm7A = {R: "L0", T: m7, B: "J0"};
+const Bsus2 = {R: "L0", T: sus2};
 const Bsus4 = {R: "L0", T: sus4};
 const Bsus4Fs = {R: "L0", T: sus4, B: "G1"};
 const B7sus2 = {R: "L0", T: sus27};
@@ -294,7 +297,7 @@ const ADDRESS =
 const EMOJI =
 {
     ANGRY: " (๑`^´๑)",
-    AWKWARD: " <^_^!>",
+    AWKWARD: " (^_^!)",
     CRY: " (T○T)",
     LOVE: " (*^。^*)",
     SAD: " (ಠ︵ಠ)",
@@ -427,10 +430,11 @@ const DICTIONARY =
                     "Notation: Ai-ai",
                     "Demonstration: Bao",
                     "Music advisors: JasonPowders, Happy; Red",///Tiger
-                    ///"Page designer: Chao",
-                    "Tech support: Jay, Imperator, Ben",
-                    "Dialect guiders: Vivian, Cong; Ai-ai, Bao",
-                    "Translator: Ben; Vivian",
+                    "Page designer: Chao",
+                    "Tech supporters: Jay, Imperator, Ben",
+                    "Dialect experts: Vivian, Cong; Ai-ai, Bao",
+                    "Translators: Ben; Vivian",
+                    "Vocal guiders: Mr. Yang, Ai-ai",
                     "Fans: Vice-principal Qian, Ada, Child, Conca, Shrimp..."
                 ]
             ]
@@ -524,10 +528,11 @@ const DICTIONARY =
                     "天才採譜：艾々",
                     "模範演奏：中宝",
                     "音楽顧問：東山直、乐々；小紅",///泰さん
-                    ///"画面設計：阿超",
+                    "画面設計：阿超",
                     "技術協力：小布、大帝、奔兒",
-                    "方言指導：小映、小聡；艾々、中宝",
+                    "方言達人：小映、小聡；艾々、中宝",
                     "外語翻訳：奔兒；小映",
+                    "声楽指導：楊会長、艾々",
                     "応援者達：銭副校長、阿達、コドモ、コンカ、エビ……"
                 ]
             ],
@@ -638,10 +643,11 @@ const DICTIONARY =
                     "天才记谱：艾々",
                     "示范演奏：中宝",
                     "音乐顾问：东山直、乐々；小红",///泰哥
-                    ///"页面设计：阿超",
+                    "页面设计：阿超",
                     "技术支持：小布、大帝、奔儿",
-                    "方言指导：小映、小聪；艾々、中宝",
+                    "方言达人：小映、小聪；艾々、中宝",
                     "外语翻译：奔儿；小映",
+                    "声乐指导：杨会长、艾々",
                     "粉丝代表：钱副校长、阿达、小孩子、孔卡、虾米……"
                 ]
             ],
