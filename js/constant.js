@@ -97,6 +97,7 @@ const Cadd9E = {R: "A0", T: add9, B: "E0"};
 const Csus2 = {R: "A0", T: sus2};
 const Csus2G = {R: "A0", T: sus2, B: "H0"};
 const Csus4 = {R: "A0", T: sus4};
+const sCm = {R: "B1", T: m};
 const sCm7 = {R: "B1", T: m7};
 const sCsus4Gs = {R: "B1", T: sus4, B: "I1"};
 const D = {R: "C0"};
@@ -127,6 +128,7 @@ const D7sus2A = {R: "C0", T: sus27, B: "J0"};
 const D7sus4 = {R: "C0", T: sus47};
 const Daug = {R: "C0", T: aug};
 const E = {R: "E0"};
+const EGs = {R: "E0", B: "I1"};
 const EB = {R: "E0", B: "L0"};
 const E6 = {R: "E0", T: "6"};
 const E7 = {R: "E0", T: "7"};
@@ -160,6 +162,7 @@ const sFmA = {R: "G1", T: m, B: "J0"};
 const sFm7 = {R: "G1", T: m7};
 const sFm7Cs = {R: "G1", T: m7, B: "B1"};
 const sFm7E = {R: "G1", T: m7, B: "E0"};
+const sFsus4 = {R: "G1", T: sus4};
 const sF7sus4 = {R: "G1", T: sus47};
 const G = {R: "H0"};
 const GD = {R: "H0", B: "C0"};
@@ -297,7 +300,7 @@ const ADDRESS =
 const EMOJI =
 {
     ANGRY: " (๑`^´๑)",
-    AWKWARD: " (^_^!)",
+    AWKWARD: " <^_^!>",
     CRY: " (T○T)",
     LOVE: " (*^。^*)",
     SAD: " (ಠ︵ಠ)",
@@ -362,7 +365,8 @@ const DICTIONARY =
                 ]
             ],
             "The above are about the cases that you found scores. How will you do if not? DIY!", LB,
-            "The arranger of our site did not major in music, and began to learn the arrangement a few years ago.", LB,
+            "The ", [TAG.J2C, "arranger"], " of our site did not major in music, " +
+            "and began to learn the arrangement a few years ago.", LB,
             "Our site is called ",
             [
                 TAG.q,
@@ -388,10 +392,10 @@ const DICTIONARY =
                 [
                     [
                         "Keys", LB,
-                        "Major keys are in upper-case letters and minor in lower-case. " +
-                        "If accidentals exist, they are put on the right side of pitches, formatted as superscripts.", LB,
+                        "Major keys are in upper-case letters and minor in lower-case. If accidentals exist, " +
+                        "they are put on the right side of pitches, formatted as superscripts.", LB,
                         "Original keys are for reference only. Please tell us if they are wrong. " +
-                        "The keys, in which songs are arranged, are decided by our arranger. " +
+                        "The keys, in which songs are arranged, are decided by the ", [TAG.J2C, "arranger"], ". " +
                         "If you want to change keys, please use the function of ", [TAG.q, "transposition"],
                         " in each page, which seems superior to those in other websites!", LB,
                         "Our framework also supports the songs including modulation recently. " +
@@ -409,7 +413,8 @@ const DICTIONARY =
                         [TAG.sup, ACCIDENTAL.T], "M, N",
                         [TAG.sup, ACCIDENTAL.T], "/O",
                         [TAG.sup, ACCIDENTAL.P], LB,
-                        "are not used. But " + ACCIDENTAL.T + " in a half-diminished chord is not displayed as a superscript."
+                        "are not used. But " +
+                        ACCIDENTAL.T + " in a half-diminished chord is not displayed as a superscript."
                     ],
                     [
                         "Major (7+th chord)", LB,
@@ -423,7 +428,7 @@ const DICTIONARY =
             ],
             "Stave or tablature is not supported for the time being. But ",
             [TAG.q, "ASCII tab"], " may be considered in the future.", PB,
-            "Last but not least, we are extremely grateful to the following collaborators:",
+            "Last but not least, we are extremely grateful to the following collaborators -",
             [
                 TAG.Cs,
                 [
@@ -474,7 +479,8 @@ const DICTIONARY =
                 ]
             ],
             "以上は楽譜を見つけた場合であり、見つけなければ／買えなければ、どう？自分でやってみるわ！", LB,
-            "ご編曲いただいている先生の専門は音楽ではなく、楽譜を探すのが嫌いなため、数年前からアレンジを習ってきている……", LB,
+            "ご編曲いただいている", [TAG.J2C, "先生"], "の専門は音楽ではなく、" +
+            "楽譜を探すのが嫌いなため、数年前からアレンジを習ってきている……", LB,
             "本サイトにコード譜しか載せていないため、「", [TAG.HP, "簡単（編曲）"], "」と名付けた。" +
             "しかし、初心者と区別するため、必ずしも基本コードだけを使うとは限らない。", LB,
             "実は難しくない！やればできるはずである。", PB,
@@ -492,7 +498,8 @@ const DICTIONARY =
                     [
                         "調", LB,
                         "長調と短調は別々に大文字と小文字で書いてある。変化記号があれば、右に置き、上付き文字で表示する。", LB,
-                        "原調はただ参考に供するだけである。合わなかったら教えてもらおうか。調整したキーは編曲先生により決められる。" +
+                        "原調はただ参考に供するだけである。合わなかったら教えてもらおうか。" +
+                        "調整したキーは", [TAG.J2C, "編曲先生"], "により決められる。" +
                         "キー変更をすれば、本フレームワークの誇らしい「移調」機能を使ってもらおうか？", LB,
                         "転調がある曲にも対応するため、本フレームワークは大幅に更新されたばかりである。" +
                         "各キーは矢印でつながる。ちなみに、そのような曲も完璧に移調できる！"
@@ -521,7 +528,7 @@ const DICTIONARY =
                 ]
             ],
             "現在は五線譜やタブ譜などが表示できないが、今後は新機能を追加するはずである。ASCII tabは検討中……", PB,
-            "最後には下記の協力者に：",
+            "最後には下記の協力者——",
             [
                 TAG.Cs,
                 [
@@ -536,7 +543,7 @@ const DICTIONARY =
                     "応援者達：銭副校長、阿達、コドモ、コンカ、エビ……"
                 ]
             ],
-            "心より感謝する！"
+            "に心より感謝する！"
         ],
         ko:
         [
@@ -590,14 +597,14 @@ const DICTIONARY =
             "以上讨论的都找到谱的情况，那肯定就有找不到的啦！" +
             "总之，没有（合适的）谱子时，怎么办呢？到处留言要谱？可能没有人会理你，原因你懂得的呀！", LB,
             "其实仔细想一想，这一行为本身就是很奇怪的！既然求谱了，说明你水平不行？就算给了你谱子，你可能也弹不了，甚至都看不懂；" +
-            "有点儿实力的人呢，那也不用求人了，自己编呗。所以那些求谱者，也许是为了收藏《琴谱》？", LB,
-            "本站邀请的编曲老师并非科班出身，也是厌倦了长期的搜（垃圾）谱生涯，于数年前才开始学习编曲的……", LB,
+            "有点儿实力的人呢，那也不用求人了，自己编呗。所以那些求谱者，也许是为了收藏《乐谱》？", LB,
+            "本站邀请的", [TAG.J2C, "编曲老师"], "并非科班出身，也是厌倦了长期的搜（垃圾）谱生涯，于数年前才开始学习编曲的……", LB,
             "本站之所以叫“", [TAG.HP, "简单（编曲）"], "”，是因为只在歌词上标注了和弦名。" +
             "而且大多采用简单的、大家都熟知却很经典的节奏，效果倒还不错啦！" +
             "不过为了摆脱初学者的队伍，和弦配得并不简单哟！而且尽可能避开各大乐谱网站与教学视频里提及的所谓《万能伴奏》。", LB,
             "其实没什么难的，相信你也可以做到！", PB,
             "看到其它网站发布的谱子上，和弦名与歌词对得参差不齐、歪歪扭扭的样子，萌生了自己动手写个前端框架的念头。一来是赶赶时髦，学着用",
-            [TAG.a, "GitHub", ADDRESS.GitHub], "。借着这么好的一个平台，加入到开源队伍中；二来嘛，练练Web三件套（HTML/CSS/JS）；" +
+            [TAG.a, "GitHub", ADDRESS.GitHub], "。借着这样一个平台，加入到开源队伍中；二来嘛，练练Web三件套（HTML/CSS/JS）；" +
             "再者自己写谱也方便，这才是开源者的主要目的！在外聚会、交友时遇到被要求即兴表演助兴的场合，因不记得谱而无法献技，" +
             "岂不把我们桃花岛的脸都丢尽了？现在好啦，掏出手机……", LB,
             "目前所完成的功能中，只对应了和弦谱的输入。本框架选用合适的编程技术，力求将和弦名与歌词对得精准。", LB,
@@ -608,7 +615,7 @@ const DICTIONARY =
                     [
                         "调", LB,
                         "大调歌曲的用大写字母表示，小调则小写。如有升降号则统一放在右边，用上标形式显示。", LB,
-                        "原调仅供参考。如有错，请不吝指正；选调大都以编曲老师所欢喜的调儿来定。" +
+                        "原调仅供参考。如有错，请不吝指正；选调大都以", [TAG.J2C, "编曲老师"], "所欢喜的调儿来定。" +
                         "需要换key的网友，请使用本站特有的《变调》功能，这是本框架的《大招》之一！", LB,
                         "至于歌曲中有《转调》的情况，本框架近期也新增了《大招》对应——原调和选调中会有箭头连接各调号，并且也能完美变调！"
                     ],
@@ -634,8 +641,7 @@ const DICTIONARY =
                     ]
                 ]
             ],
-            "五／六线谱暂时无法实现。随着编曲老师水平的提高，今后肯定会尝试编些solo。" +
-            "那么框架的功能也会随之扩充，可能考虑支持下ASCII tab谱……", PB,
+            "五／六线谱暂时无法实现。今后框架的功能应该会扩充，可能考虑支持简谱和ASCII tab谱……", PB,
             "最后对于合作者们——",
             [
                 TAG.Cs,

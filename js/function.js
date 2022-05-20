@@ -54,6 +54,10 @@ function appendBreak(container)
     appendTag(TAG.br, container);
 }
 // link
+function getAnchor(original, link)
+{
+    return [TAG.a, original[ELEMENT.between], link];
+}
 function getLink(prefix, folder, file) // "file" may be "path", "base" or "path/base".
 {
     var extension = folder in FileType ? FileType[folder] : folder;
@@ -69,26 +73,22 @@ function normalizeTag(prefix, original, container)
     switch (original[ELEMENT.tag])
     {
         case TAG.ALP: // [ALP, between, ALP]
-            return [
-                TAG.a,
-                original[ELEMENT.between],
-                getLink(prefix, PAGE, original[ELEMENT.ALP])
-            ];
+            return getAnchor(original, getLink(prefix, PAGE, original[ELEMENT.ALP]));
         case TAG.BoA: // [BoA, between, ALP, ID]
-            return [
-                TAG.a,
-                original[ELEMENT.between],
-                getLink(prefix, PAGE, original[ELEMENT.ALP]) + link2bookmark(original[ELEMENT.ID])
-            ];
+            return getAnchor
+                    (
+                        original,
+                        getLink(prefix, PAGE, original[ELEMENT.ALP]) + link2bookmark(original[ELEMENT.ID])
+                    );
         case TAG.CHORD: // [CHORD, between]
             appendChord(original[ELEMENT.between], container);
             return [];
         case TAG.Cs: // [Cs, between]
             return [TAG.ul, original[ELEMENT.between], TAG.Cs];
         case TAG.HP: // [HP, between]
-            return [TAG.a, original[ELEMENT.between], prefix + ADDRESS.HomePage];
+            return getAnchor(original, prefix + ADDRESS.HomePage);
         case TAG.J2C: // [J2C, between]
-            return [TAG.a, original[ELEMENT.between], link2bookmark(TAG.Cs)];
+            return getAnchor(original, link2bookmark(TAG.Cs));
         case TAG.PB:
             appendBreak(container);
             return LB;
