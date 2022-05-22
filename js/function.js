@@ -388,7 +388,11 @@ function appendSection(section, language, container)
     var transposition = appendScore(section, eSECTION);
     var t = transposition[FIRST]; // used as the 1st item, or each one of "transposition"
     var difference = limit2interval // difference between arranged & original key
-                        (convert2ASCII(t.arranged) - convert2ASCII(t.original), TRANSPOSITION.MIN, TRANSPOSITION.MAX);
+                        (
+                            convert2ASCII(t.arranged) - convert2ASCII(t.original),
+                            TRANSPOSITION.MIN,
+                            TRANSPOSITION.MAX
+                        );
 // key
     for (t of transposition) // join keys with arrow if necessary
         for (which in keys) keys[which] += reverseNote(KEY.TONALITY[t[which]]) + ARROW;

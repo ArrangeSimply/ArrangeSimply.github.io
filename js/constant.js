@@ -365,8 +365,10 @@ const DICTIONARY =
                 ]
             ],
             "The above are about the cases that you found scores. How will you do if not? DIY!", LB,
-            "The ", [TAG.J2C, "arranger"], " of our site did not major in music, " +
-            "and began to learn the arrangement a few years ago.", LB,
+            "The ", [TAG.J2C, "arranger"], " of the scores at our site did not major in music, " +
+            "and began to learn the arrangement a few years ago; the ", [TAG.J2C, "teacher"],
+            ", who provides numbered notations for our site, can write down DO RE MI FA SO LA TI immediately " +
+            "after listening to melodies, despite receiving no formal training in music. How incredible!", LB,
             "Our site is called ",
             [
                 TAG.q,
@@ -397,7 +399,7 @@ const DICTIONARY =
                         "Original keys are for reference only. Please tell us if they are wrong. " +
                         "The keys, in which songs are arranged, are decided by the ", [TAG.J2C, "arranger"], ". " +
                         "If you want to change keys, please use the function of ", [TAG.q, "transposition"],
-                        " in each page, which seems superior to those in other websites!", LB,
+                        " on each page, which seems superior to those at other websites!", LB,
                         "Our framework also supports the songs including modulation recently. " +
                         "Tonics are connected with arrows in the ", [TAG.q, "Original"], " or ", [TAG.q, "Arranged"],
                         " keys. In addition, those songs can be transposed perfectly!",
@@ -480,7 +482,8 @@ const DICTIONARY =
             ],
             "以上は楽譜を見つけた場合であり、見つけなければ／買えなければ、どう？自分でやってみるわ！", LB,
             "ご編曲いただいている", [TAG.J2C, "先生"], "の専門は音楽ではなく、" +
-            "楽譜を探すのが嫌いなため、数年前からアレンジを習ってきている……", LB,
+            "楽譜を探すのが嫌いなため、数年前からアレンジを習ってきている；ご採譜いただいている", [TAG.J2C, "先生"],
+            "は専門的なトレーニングを受けたことが全然ないが、メロディーを聞くとドレミﾌｧソラシが書き取れる。不思議であろうか？", LB,
             "本サイトにコード譜しか載せていないため、「", [TAG.HP, "簡単（編曲）"], "」と名付けた。" +
             "しかし、初心者と区別するため、必ずしも基本コードだけを使うとは限らない。", LB,
             "実は難しくない！やればできるはずである。", PB,
@@ -598,7 +601,8 @@ const DICTIONARY =
             "总之，没有（合适的）谱子时，怎么办呢？到处留言要谱？可能没有人会理你，原因你懂得的呀！", LB,
             "其实仔细想一想，这一行为本身就是很奇怪的！既然求谱了，说明你水平不行？就算给了你谱子，你可能也弹不了，甚至都看不懂；" +
             "有点儿实力的人呢，那也不用求人了，自己编呗。所以那些求谱者，也许是为了收藏《乐谱》？", LB,
-            "本站邀请的", [TAG.J2C, "编曲老师"], "并非科班出身，也是厌倦了长期的搜（垃圾）谱生涯，于数年前才开始学习编曲的……", LB,
+            "本站邀请的", [TAG.J2C, "编曲老师"], "并非科班出身，也是厌倦了长期的搜（垃圾）谱生涯，于数年前才开始学习编曲的；而",
+            [TAG.J2C, "记谱老师"], "也从未受过专业的训练。但只要听一段旋律，就立马能写下1234567。神奇吧？", LB,
             "本站之所以叫“", [TAG.HP, "简单（编曲）"], "”，是因为只在歌词上标注了和弦名。" +
             "而且大多采用简单的、大家都熟知却很经典的节奏，效果倒还不错啦！" +
             "不过为了摆脱初学者的队伍，和弦配得并不简单哟！而且尽可能避开各大乐谱网站与教学视频里提及的所谓《万能伴奏》。", LB,
