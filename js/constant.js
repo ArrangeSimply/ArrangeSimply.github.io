@@ -365,8 +365,8 @@ const DICTIONARY =
                 ]
             ],
             "The above are about the cases that you found scores. How will you do if not? DIY!", LB,
-            "The ", [TAG.J2C, "arranger"], " of the scores at our site did not major in music, " +
-            "and began to learn the arrangement a few years ago; the ", [TAG.J2C, "teacher"],
+            "The ", [TAG.J2C, "arranger"], " of the scores at our site does not major in music, " +
+            "and has been learning the arrangement since this decade; the ", [TAG.J2C, "teacher"],
             ", who provides numbered notations for our site, can write down DO RE MI FA SO LA TI immediately " +
             "after listening to melodies, despite receiving no formal training in music. How incredible!", LB,
             "Our site is called ",
@@ -602,7 +602,7 @@ const DICTIONARY =
             "其实仔细想一想，这一行为本身就是很奇怪的！既然求谱了，说明你水平不行？就算给了你谱子，你可能也弹不了，甚至都看不懂；" +
             "有点儿实力的人呢，那也不用求人了，自己编呗。所以那些求谱者，也许是为了收藏《乐谱》？", LB,
             "本站邀请的", [TAG.J2C, "编曲老师"], "并非科班出身，也是厌倦了长期的搜（垃圾）谱生涯，于数年前才开始学习编曲的；而",
-            [TAG.J2C, "记谱老师"], "也从未受过专业的训练。但只要听一段旋律，就立马能写下1234567。神奇吧？", LB,
+            [TAG.J2C, "记谱老师"], "更是从未受过任何专业的训练。但只要听一段旋律，就立马能写下1234567。神奇吧？", LB,
             "本站之所以叫“", [TAG.HP, "简单（编曲）"], "”，是因为只在歌词上标注了和弦名。" +
             "而且大多采用简单的、大家都熟知却很经典的节奏，效果倒还不错啦！" +
             "不过为了摆脱初学者的队伍，和弦配得并不简单哟！而且尽可能避开各大乐谱网站与教学视频里提及的所谓《万能伴奏》。", LB,
