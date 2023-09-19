@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/arrangement.css" />
+    <script src="js/constant.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/function.js"></script>
+    <title>ArrangeSimply／简单编曲</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a>歌曲</a>
+          <ul>
+            <li>
+              <a href="page/gequ/dl.html">大陆</a>
+            </li>
+            <li>
+              <a href="page/gequ/xg.html">香港</a>
+            </li>
+            <li>
+              <a href="page/gequ/tw.html">台湾</a>
+            </li>
+            <li>
+              <a href="page/gequ/xjp.html">新加坡</a>
+            </li>
+            <li>
+              <a href="page/gequ/mlxy.html">马来西亚</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="page/uta.html">うた</a>
+        </li>
+        <li>
+          <a href="page/nolae.html">노래</a>
+        </li>
+        <li>
+          <a>Song</a>
+          <ul>
+            <li>
+              <a href="page/song/us.html">US</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="page/lied.html">Lied</a>
+        </li>
+        <li>
+          <a href="page/chanson.html">Chanson</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1>简单编曲</h1>
+      <h1>ArrangeSimply</h1>
+    </header>
+    <main>
+      <article>
+        <h2>
+          <a href="page/gequ/tw.html#QRCDFFF">俏如彩蝶飞飞飞</a>
+        </h2>
+        <section>
+<script>
+var arrival = DATA.gequ;
+appendScore
+(
+    (CLASSIFICATION in arrival ? arrival.classification.tw.main : arrival.main).QRCDFFF.section,
+    document.getElementsByTagName(TAG.section)[FIRST]
+);
+</script>
+        </section>
+        <details open>
+          <summary>示范演奏</summary><!--模範Demo데모-->
+          <audio controls>
+            <source src="audio/gequ/tw/QRCDFFF.mp3" type="audio/mpeg" />
+          </audio>
+          <!--video controls>
+            <source src="video/gequ/tw/QRCDFFF.mp4" type="video/mp4" />
+          </video-->
+        </details>
+      </article>
+    </main>
+    <aside>
+      <p>
+        <a href="page/gequ/tw.html#COLLABORATORS">记谱老师</a>买回两张《琼瑶电影全集》的碟片……<br />
+        有些比较有名的，当年都在电影院看过。先播一部不知名的，恰好就挑中了《<a href="page/gequ/tw.html#QRCDFFF">俏如彩蝶飞飞飞</a>》。<br />
+        电影一开始就唱<a href="page/gequ/tw.html#QRCDFFF">主题歌</a>，光听前奏就立马被吸引了！再看主演名单——钟镇涛认识；沈雁是谁啊？没听说过啊！有名的么：林青霞、林凤娇……
+      </p>
+      <p>
+        看完才知道，原来电影的同名<a href="page/gequ/tw.html#QRCDFFF">主题歌</a>就是雁姊々唱的。作词孙仪应该没有异议；作曲则说法不一，电影片头写的是张毅。<br />
+        其中孙老师的来头可大了！《月亮代表我的心》就出自他的手，今后可能会介绍。
+      </p>
+      <p>
+        搜索后又发现，电影中的两首插曲《一串心》和《幽幽一个梦》也都是雁姐唱的，今后可能也会介绍。其实她唱过很多歌，大都不错的，可能再挑两首别的介绍介绍。<br />
+        雁姐蛮好看娥，声音也蛮好听，当年一定很红！可惜在大陆的知名度不高。晨々说家里有雁姐的磁带，小时候母亲经常听 (ﾉﾟοﾟ)ﾉ
+      </p>
+    </aside>
+    <footer>
+      <small>
+<script>
+var prefix = "";
+switch (arrival.language)
+{
+    case "en":
+    case "zh":
+        prefix = UP2;
+        break;
+    case "de":
+    case "fr":
+    case "ja":
+    case "ko":
+        prefix = UP1;
+}
+var as = document.getElementsByTagName(TAG.small); // all SMALLs
+appendRecursively(prefix, DICTIONARY.footer[arrival.language], as[as.length - 1]);
+</script>
+      </small>
+    </footer>
+  </body>
+</html>
