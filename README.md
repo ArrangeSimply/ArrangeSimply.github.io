@@ -5,7 +5,10 @@ Please click [here](https://ArrangeSimply.github.io).
 ### What's new:
 + 「父の日」のうちに「父の歌」をアレンジしてみた。  
 「[お元気ですか お父さん](https://ArrangeSimply.github.io/page/uta.html#OGnKDSK_OTuSn)」は日高美子先生しか歌えないような気がする。他人には本当に難しい！  
-半音はいくつかある。前奏、Bメロ、間奏に入っている………………
+半音はいくつかある。前奏、Bメロ、間奏に入っている……………………
++ 歌名到底是偏喜还是偏悲？无梦，作何解：不是梦（喜）？别梦想（悲）？  
+看歌词和听旋律呢，那就是悲了；从被用于[主题歌](https://ArrangeSimply.github.io/page/gequ/xg.html#XAWM)的《西关大少》剧情来说呢，就难定论了！男女主角被拆散，女方嫁给别人，肯定是悲；女方丧偶后，又和男方好了，可以看成喜。整体而言，究竟是由悲到喜，以喜收场，属于偏喜呢？还是悲的情节多，最后在一起也是有瑕疵的，算作偏悲呢？  
+张智霖有几首歌不错的，今后可能再挑些介绍。但感觉最好听的还是《[相爱无梦](https://ArrangeSimply.github.io/page/gequ/xg.html#XAWM)》。
 + [记谱老师](https://ArrangeSimply.github.io/page/gequ/tw.html#COLLABORATORS)买回两张《琼瑶电影全集》的碟片…… 有些比较有名的，当年都在电影院看过。先播一部不知名的，恰好就挑中了《[俏如彩蝶飞飞飞](https://ArrangeSimply.github.io/page/gequ/tw.html#QRCDFFF)》。电影一开始就唱[主题歌](https://ArrangeSimply.github.io/page/gequ/tw.html#QRCDFFF)，光听前奏就立马被吸引了！再看主演名单——钟镇涛认识；沈雁是谁啊？没听说过啊！有名的么：林青霞、林凤娇……  
 看完才知道，原来电影的同名[主题歌](https://ArrangeSimply.github.io/page/gequ/tw.html#QRCDFFF)就是雁姊々唱的。作词孙仪应该没有异议；作曲则说法不一，电影片头写的是张毅。其中孙老师的来头可大了！《月亮代表我的心》就出自他的手，今后可能会介绍。  
 搜索后又发现，电影中的两首插曲《一串心》和《幽幽一个梦》也都是雁姐唱的，今后可能也会介绍。其实她唱过很多歌，大都不错的，可能再挑两首别的介绍介绍。雁姐蛮好看娥，声音也蛮好听，当年一定很红！可惜在大陆的知名度不高。晨々说家里有她的磁带，小时候母亲欢喜听。
@@ -117,4 +120,4 @@ Besides the lyrics written in CJK characters(full-width), those in western langu
 キー変更機能は完了である。ぜひ各ページで試してみてね！
 #### Attention
 Thank you for your interest in our repository!  
-A front-end framework is being provided for enthusiasts of music and programming to create chord-scores conveniently. Thus our project is not the one to inquire for musical scores. All of the files including multimedia in our repository are used to test the framework. Please do not copy them!
+A front-end framework is provided for enthusiasts of music or programming to create chord-scores conveniently. Thus our project is not the one to inquire for musical scores. All of the files including multimedia in our repository are used to test whether the framework works. Please do not copy them!

@@ -771,11 +771,11 @@ const DICTIONARY =
         en:
         [
             "Thank you for your visit to our site!", PB,
-            "A front-end framework is being provided for enthusiasts of music and programming " +
+            "A front-end framework is provided for enthusiasts of music or programming " +
             "to create chord-scores conveniently.", LB,
             "Thus our site is not the one to inquire for musical scores.", LB,
-            "All of the scores and multimedia available at our site are used to test the framework.", LB,
-            "Please do not reprint them!"
+            "All of the scores and multimedia available at our site are used to test whether the framework works.", LB,
+            "Please do not copy them!"
         ],
         fr:
         [
@@ -785,8 +785,9 @@ const DICTIONARY =
         ja:
         [
             "わざわざご覧いただき、誠にありがとうございます！", PB,
-            "音楽とプログラミング愛好者のため、コード譜が楽に作成できるフロント・エンド・フレームワークを実装してみました。", LB,
-            "楽譜を検索するため、本サイトの利用はご遠慮ください。", PB,
+            "音楽やプログラミング愛好者のため、コード譜が楽に作成できるフロント・エンド・フレームワークを実装してみました。", LB,
+            "楽譜を検索するため、本サイトの利用はお控えください。", LB,
+            "本サイトにおける譜面や音声や動画などは、フレームワークの動作を確認するため、無断転載禁止です。", PB,
             "歌詞は掲載しかねます。"///
         ],
         ko:
