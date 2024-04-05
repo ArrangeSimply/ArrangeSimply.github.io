@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/arrangement.css" />
+    <script src="js/constant.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/function.js"></script>
+    <title>ArrangeSimply／简单编曲</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a>歌曲</a>
+          <ul>
+            <li>
+              <a href="page/gequ/dl.html">大陆</a>
+            </li>
+            <li>
+              <a href="page/gequ/xg.html">香港</a>
+            </li>
+            <li>
+              <a href="page/gequ/tw.html">台湾</a>
+            </li>
+            <li>
+              <a href="page/gequ/xjp.html">新加坡</a>
+            </li>
+            <li>
+              <a href="page/gequ/mlxy.html">马来西亚</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="page/uta.html">うた</a>
+        </li>
+        <li>
+          <a href="page/nolae.html">노래</a>
+        </li>
+        <li>
+          <a>Song</a>
+          <ul>
+            <li>
+              <a href="page/song/us.html">US</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="page/lied.html">Lied</a>
+        </li>
+        <li>
+          <a href="page/chanson.html">Chanson</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h1>简单编曲</h1>
+      <h1>ArrangeSimply</h1>
+    </header>
+    <main>
+      <article>
+        <h2>
+          <a href="page/gequ/xjp.html#CXCWCYD">财兴财旺财运到</a>
+        </h2>
+        <section>
+<script>
+var arrival = DATA.gequ;
+appendScore
+(
+    (CLASSIFICATION in arrival ? arrival.classification.xjp.main : arrival.main).CXCWCYD.section,
+    document.getElementsByTagName(TAG.section)[FIRST]
+);
+</script>
+        </section>
+        <details open>
+          <summary>示范演奏</summary>
+          <audio controls>
+            <source src="audio/gequ/xjp/CXCWCYD.mp3" type="audio/mpeg" />
+          </audio>
+          <!--video controls>
+            <source src="video/gequ/xjp/CXCWCYD.mp4" type="video/mp4" />
+          </video模範Demo데모-->
+        </details>
+      </article>
+    </main>
+    <aside>
+      <p>
+        从没想过《<a href="page/gequ/xjp.html#CXCWCYD">财兴财旺财运到</a>》竟然有专辑版！<br />
+        看日期是前两年某网友分享的！在此也对其表示感谢！<br />
+        专辑里的其它歌就没啥好讨论的了。
+      </p>
+      <p>
+        《财星高照》首播时，一集也没看过。……。<br />
+        演员阵容还算强大，但剧情不咋的。说实话，真的蛮无聊的。<br />
+        女主角“刘寅”到底是何方神圣？把正当红的“郭芙”都给挤到了2号的位子上……。
+      </p>
+      <p>
+        <a href="page/gequ/xjp.html#CXCWCYD">主题歌</a>倒是听过几次。高潮的旋律很好听，所以印象很深。原唱黄老师前几年…… (T○T)<br />
+        以前觉得黄老师唱得一般。不过也可以理解，毕竟他不是专业歌手。<br />
+        自己尝试后才发现其实蛮难唱的！音域跨度蛮大的！最低的低至低音5；最高的高到高音2。如果算上前奏，得唱到高音3。
+      </p>
+    </aside>
+    <footer>
+      <small>
+<script>
+var prefix = "";
+switch (arrival.language)
+{
+    case "en":
+    case "zh":
+        prefix = UP2;
+        break;
+    case "de":
+    case "fr":
+    case "ja":
+    case "ko":
+        prefix = UP1;
+}
+var as = document.getElementsByTagName(TAG.small); // all SMALLs
+appendRecursively(prefix, DICTIONARY.footer[arrival.language], as[as.length - 1]);
+</script>
+      </small>
+    </footer>
+  </body>
+</html>
