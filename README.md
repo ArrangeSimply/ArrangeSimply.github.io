@@ -7,8 +7,8 @@ Please click [here](https://ArrangeSimply.github.io).
 「[お元気ですか お父さん](https://ArrangeSimply.github.io/page/uta.html#OGnKDSK_OTuSn)」は日高美子先生しか歌えないような気がする。他人には本当に難しい！  
 半音はいくつかある。前奏、Bメロ、間奏に入っている……………………
 + 从没想过《[财兴财旺财运到](https://ArrangeSimply.github.io/page/gequ/xjp.html#CXCWCYD)》竟然有专辑版！看日期是前两年某网友分享的！在此也对其表示感谢！专辑里的其它歌就没啥好讨论的了。  
-《财星高照》首播时，一集也没看过。直至宽带普及、视频网站兴起后，才完整地扫了一遍。演员阵容还算强大，但剧情不咋的。说实话，真的蛮无聊的。女主角“刘寅”到底是何方神圣？把正当红的秀丽姊々都给挤成了2号。别的新剧里没见过有这人，最大似然估计她是中方的演员。  
-[主题歌](https://ArrangeSimply.github.io/page/gequ/xjp.html#CXCWCYD)倒是听过几次。高潮的旋律很好听，所以印象深刻，能哼个八九不离十。原唱黄老师前几年…… 以前觉得黄老师唱得一般。不过也可以理解，毕竟他不是专业歌手。自己尝试后才发现其实蛮难唱的！音域跨度蛮大的！最低的低至低音5；最高的高到高音2。如果算上前奏，得唱到高音3。
+当年明明记得片名叫《财神传奇》，宽带普及后网上搜不到！待搜到时咋成《财星高照》了呢？还发现新加坡原版叫《财神爷》。首播时，一集也没看过。直至视频网站兴起后，才完整地扫了一遍。演员阵容还算强大，但剧情不咋的。说实话，真的蛮无聊的。女主角“刘寅”到底是何方神圣？把正当红的秀丽姊々都给挤成了2号。别的新剧里没见过有这人，最大似然估计她是中方的演员。  
+[主题歌](https://ArrangeSimply.github.io/page/gequ/xjp.html#CXCWCYD)倒是听过几次。高潮的旋律很好听，所以印象深刻，能哼个八九不离十。原唱黄老师前几年…… 以前觉得黄老师唱得一般。不过也可以理解，毕竟他不是专业歌手。自己尝试后才发现其实蛮难唱的！音域跨度蛮大的！最低的低至低音5；最高的高到高音2。如果算上前奏，得唱到高音3。就是不知道是谁作曲的？
 + 歌名到底是偏喜还是偏悲？无梦，作何解：不是梦（喜）？别梦想（悲）？  
 看歌词和听旋律呢，那就是悲了；从被用于[主题歌](https://ArrangeSimply.github.io/page/gequ/xg.html#XAWM)的《西关大少》剧情来说呢，就难定论了！男女主角被拆散，女方嫁给别人，肯定是悲；女方丧偶后，又和男方好了，可以看成喜。整体而言，究竟是由悲到喜，以喜收场，属于偏喜呢？还是悲的情节多，最后在一起也是有瑕疵的，算作偏悲呢？  
 张智霖有几首歌不错的，今后可能再挑些介绍。但感觉最好听的还是《[相爱无梦](https://ArrangeSimply.github.io/page/gequ/xg.html#XAWM)》。
@@ -111,7 +111,8 @@ Please click [here](https://ArrangeSimply.github.io).
 "[Rose, Rose, I Love You](https://ArrangeSimply.github.io/page/song/us.html#RRILY)" is the song which I tried to arrange with the style of JAZZ for the first time. The chords which had not been considered yet, such as major 9th and half-diminished ones, were used.  
 There is also a Malaysian version sung by Zainal Alam. It will be introduced in our site in the future.  
 Besides the lyrics written in CJK characters(full-width), those in western languages(half-width) have also been supported.
-+ 《昆仑奴》的片尾曲之一，中国引进后咋把片名改为《大唐传奇》了？头尾4首歌都是梁老师作词作曲（《长恨歌》除外），文学水平也是相当了得！其中以《[爱你一生嫌不够](https://ArrangeSimply.github.io/page/gequ/xjp.html#ANYSXBG)》最为好听，今后可能也会介绍其它几首歌。  
++ 《昆仑奴》的[片尾曲](https://ArrangeSimply.github.io/page/gequ/xjp.html#ANYSXBG)之一，中国引进后咋把片名改为《大唐传奇》了？  
+头尾4首歌都是梁老师作词（《长恨歌》除外）作曲，文学水平那是相当了得！其中以《[爱你一生嫌不够](https://ArrangeSimply.github.io/page/gequ/xjp.html#ANYSXBG)》最为好听，今后可能也会介绍其它几首歌。  
 前奏很有味道！但苦于水平有限，耳朵也不好使，一直编不出来…… 偶然间看到“桃李醉春风”的谱子，终于得偿所愿！不敢说跟原版比，但也算可以了？在此对桃李老师表示感谢！
 + 小映老师大力推荐！  
 起初不以为然，听过一次后就上瘾了！前一枪还恰好重播同名电视剧，顺带着也看了一遍。说实话片儿倒不好看，讲的是祖孙3代悲惨的爱情故事。其中前2代更是很不健康：第1代跟个和尚胡搞；第2代看相俄老头子铱钢；第3代的男友还想姊妹通吃。  
