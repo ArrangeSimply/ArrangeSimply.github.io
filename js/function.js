@@ -23,7 +23,7 @@ function shuffle(original)
 }
 function removeAllChildren(parent)
 {
-// faster to check for the first Child than the last one
+// faster to check for the first child than the last one
     while (parent.firstChild) parent.lastChild.remove();
 // faster to remove the last child than the first one
 }
@@ -45,23 +45,22 @@ function appendTag8text(tag, text, container)
     appendText(text, element);
     return element;
 }
-function appendDT8colon(word, language, container)
+function appendTerm(word, language, container) // a term of original or arranged key
 {
-    return appendTag8text(TAG.dt, DICTIONARY[word][language] + DICTIONARY.colon[language], container);
+    return appendTag8text(TAG.DT, DICTIONARY[word][language] + DICTIONARY.colon[language], container);
 }
 function appendBreak(container)
 {
-    appendTag(TAG.br, container);
+    appendTag(TAG.BR, container);
 }
 // link
 function getAnchor(original, link)
 {
-    return [TAG.a, original[ELEMENT.between], link];
+    return [TAG.A, original[ELEMENT.between], link];
 }
-function getLink(prefix, folder, file) // "file" may be "path", "base" or "path/base".
+function getLink(prefix, folder, file) // file may be path, base or path/base.
 {
-    var extension = folder in FileType ? FileType[folder] : folder;
-    return prefix + folder + SLASH + file + DOT + extension;
+    return prefix + folder + "/" + file + "." + FileType[folder];
 }
 function link2bookmark(id)
 {
@@ -75,16 +74,12 @@ function normalizeTag(prefix, original, container)
         case TAG.ALP: // [ALP, between, ALP]
             return getAnchor(original, getLink(prefix, PAGE, original[ELEMENT.ALP]));
         case TAG.BoA: // [BoA, between, ALP, ID]
-            return getAnchor
-                    (
-                        original,
-                        getLink(prefix, PAGE, original[ELEMENT.ALP]) + link2bookmark(original[ELEMENT.ID])
-                    );
+            return getAnchor(original, getLink(prefix, PAGE, original[ELEMENT.ALP]) + link2bookmark(original[ELEMENT.ID]));
         case TAG.CHORD: // [CHORD, between]
             appendChord(original[ELEMENT.between], container);
             return [];
         case TAG.COLLABORATORS: // [COLLABORATORS, between]
-            return [TAG.ul, original[ELEMENT.between], TAG.COLLABORATORS];
+            return [TAG.UL, original[ELEMENT.between], TAG.COLLABORATORS];
         case TAG.HP: // [HP, between]
             return getAnchor(original, prefix + ADDRESS.HomePage);
         case TAG.J2C: // [J2C, between]
@@ -96,10 +91,10 @@ function normalizeTag(prefix, original, container)
             return original;
     }
 }
-function appendList(prefix, list, container) // "list" is an array.
+function appendList(prefix, list, container) // list is an array.
 {
     var l; // string or array
-    for (l of list) appendRecursively(prefix, [[TAG.li, l]], container);
+    for (l of list) appendRecursively(prefix, [[TAG.LI, l]], container);
 }
 function appendRecursively(prefix, content, container)
 {
@@ -120,14 +115,14 @@ function appendRecursively(prefix, content, container)
                     element = appendTag(tag, container);
                     switch (tag)
                     {
-                        case TAG.br:
+                        case TAG.BR:
                             break;
-                        case TAG.ol:
-                        case TAG.ul:
+                        case TAG.OL:
+                        case TAG.UL:
                             if (normalized.length > ELEMENT.COLLABORATORs) element.id = normalized[ELEMENT.COLLABORATORs];
                             appendList(prefix, normalized[ELEMENT.between], element);
                             break;
-                        case TAG.a:
+                        case TAG.A:
                             element.href = normalized[ELEMENT.href];
                         default:
                             appendRecursively(prefix, normalized[ELEMENT.between], element);
@@ -138,7 +133,7 @@ function appendRecursively(prefix, content, container)
 // transposition
 function convert2ASCII(tone)
 {
-    return tone.charCodeAt(KEY.ET);
+    return tone.charCodeAt(KEY.TET12);
 }
 function limit2interval(number, left, right) // interval notation: [left-endpoint, right-endpoint]
 {
@@ -148,7 +143,7 @@ function limit2interval(number, left, right) // interval notation: [left-endpoin
 }
 function changeTone(tone, offset, left, right)
 {
-    return String.fromCharCode(limit2interval(convert2ASCII(tone) + offset, left, right)); // converted to char finally
+    return String.fromCharCode(limit2interval(convert2ASCII(tone) + offset, left, right)); // char => number => char
 }
 function changeMajorKey(key, offset)
 {
@@ -168,7 +163,7 @@ function appendSpecialString(text, container) // transformed into special charac
                 break;
             case "P": // (SHAR)P
             case "T": // (FLA)T
-                appendTag8text(TAG.sup, ACCIDENTAL[t], container);
+                appendTag8text(TAG.SUP, ACCIDENTAL[t], container);
                 break;
             case "-": // used in half-diminished chords
                 appendText(ACCIDENTAL.T, container);
@@ -181,48 +176,29 @@ function transpose(offset, transposition)
 {
     var current = ""; // current key
     var tone = "";
-    var accidental = "";
+    var combination = ""; // tone + accidental
     var transposed = ""; // transposed note
     var t = {};
-    var tc = {};
+    var tc = {}; // object defined in function appendNote()
     for (t of transposition)
     {
-        if (/[O-Z]/.test(t.original)) current = changeMajorKey(t.arranged, offset);
-        else current = changeTone(t.arranged, offset, TRANSPOSITION.o, TRANSPOSITION.z);
+        current = /[O-Z]/.test(t.original) ? changeMajorKey(t.arranged, offset) : changeTone(t.arranged, offset, TRANSPOSITION.o, TRANSPOSITION.z);
         for (tc of t.collection)
         {
             removeAllChildren(tc.element);
-            tone = changeMajorKey(tc.et, offset);
-            if (tone + ACCIDENTAL.NATURAL in KEY.TONALITY) accidental = ACCIDENTAL.NATURAL;
-            else
-                switch (current)
-                {
-                    case "O": case "o": //  C ~ a
-                    case "T": case "t": //  F ~ d
-                    case "Y": case "y": // ♭B ~ g
-                    case "R": case "r": // ♭E ~ c
-                    case "W": case "w": // ♭A ~ f
-                    case "P": case "p": // ♭D ~ b♭
-                        accidental = ACCIDENTAL.FLAT;
-                        break;
-                    case "V": case "v": //  G ~ e
-                    case "Q": case "q": //  D ~ b
-                    case "X": case "x": //  A ~ f♯
-                    case "S": case "s": //  E ~ c♯
-                    case "Z": case "z": //  B ~ g♯
-                    case "U": case "u": // ♯F ~ d♯
-                        accidental = ACCIDENTAL.SHARP;
-                }
-            transposed = KEY.TONALITY[tone + accidental];
-            appendSpecialString(CHORD.B === tc.ln ? reverseNote(transposed) : transposed, tc.element);
+            tone = changeMajorKey(tc.tet12, offset);
+            combination = tone + ACCIDENTAL.L;
+            if (!(combination in KEY.TONALITY)) combination = tone + CIRCLE5[current];
+            transposed = KEY.TONALITY[combination];
+            appendSpecialString(CHORD.R === tc.position ? transposed : reverseNote(transposed), tc.element);
         }
     }
 }
 // create page
 function getPage(url)
 {
-    var splitURL = url.split(SLASH);
-    var name = splitURL.pop().split(DOT).shift(); // name of current page
+    var splitURL = url.split("/");
+    var name = splitURL.pop().split(".").shift(); // name of current page
     var page =
     {
         information: {},
@@ -233,36 +209,36 @@ function getPage(url)
             path: name, // effective path without extension
             language: ""
         }
-    };
+    }; // had better not define intermediate variables, such as pa=page.addition
     if (name in DATA) page.information = DATA[name];
     else
     {
         page.addition.prefix = UP2;
-        page.addition.top = splitURL.pop();
-        page.addition.path = page.addition.top + SLASH + name;
+        page.addition.top = splitURL.pop(); // pop the 2nd time
+        page.addition.path = page.addition.top + "/" + name;
         page.information = DATA[page.addition.top].classification[name];
     }
     page.addition.language = DATA[page.addition.top].language;
     return page;
 }
-function appendNote(note, tone, position, collection, container)
+function appendNote(note, tone, flag, collection, container)
 {
-    var eSPAN = appendTag(TAG.span, container);
-    appendSpecialString(note, eSPAN);
+    var span = appendTag(TAG.SPAN, container);
+    appendSpecialString(note, span);
     collection.push
     (
         {
-            element: eSPAN,
-            et: tone, // equal temperament
-            ln: position // position of the lowest note
+            element: span,
+            tet12: tone, // twelve-tone equal temperament
+            position: flag // position of note, ROOT or BASS
         }
     );
 }
 function appendChord(chord, container)
 {
     var collection = [];
-    var eSMALL;
-    var st = ""; // small text
+    var small;
+    var text = "";
     appendNote(KEY.TONALITY[chord.R], chord.R, CHORD.R, collection, container);
     if (CHORD.T in chord)
     {
@@ -272,16 +248,16 @@ function appendChord(chord, container)
             if (m === chord.T[FIRST] && m7b5 !== chord.T)
             {
                 appendText(m, container);
-                st = chord.T.slice(1);
+                text = chord.T.slice(1);
             }
-            else st = chord.T;
-            eSMALL = appendTag(TAG.small, container);
-            appendSpecialString(st, eSMALL);
+            else text = chord.T;
+            small = appendTag(TAG.SMALL, container);
+            appendSpecialString(text, small);
         }
     }
     if (CHORD.B in chord)
     {
-        appendText(SLASH, container);
+        appendText("/", container);
         appendNote(reverseNote(KEY.TONALITY[chord.B]), chord.B, CHORD.B, collection, container);
     }
     return collection;
@@ -293,8 +269,8 @@ function collectChords(chord, collection, container)
 }
 function appendLine(chords, lyrics, collection, container) // a line of lyrics with chords
 {
-    var eRUBY;
-    var eRT;
+    var ruby;
+    var rt;
     var sls = FWS + lyrics + FWS; // firstly add full-width spaces on both sides
     var difference = Object.keys(chords).pop() - sls.length; // compare the index of last chord to the length of lyrics
     var i;
@@ -322,20 +298,20 @@ function appendLine(chords, lyrics, collection, container) // a line of lyrics w
         else offset = 1; // full width
 // append lyrics with a chord/chords
         from = Math.min(to + offset, sls.length); // swap "from" & "to" so that the next "from" need not be set
-        eRUBY = appendTag8text(TAG.ruby, sls.slice(to, from), container);
-        eRT = appendTag(TAG.rt, eRUBY);
+        ruby = appendTag8text(TAG.RUBY, sls.slice(to, from), container);
+        rt = appendTag(TAG.RT, ruby);
         if (Array.isArray(chord)) // a set of chords, which may contains (D)FWSs
             for (c of chord)
-                if (STRING === typeof c) appendText(c, eRT); // (D)FWS
-                else collectChords(c, collection, eRT);
-        else collectChords(chord, collection, eRT); // a single chord
+                if (STRING === typeof c) appendText(c, rt); // (D)FWS
+                else collectChords(c, collection, rt);
+        else collectChords(chord, collection, rt); // a single chord
     }
     if (from < sls.length) appendText(sls.slice(from, sls.length), container); // add the rest of lyrics if necessary
     appendBreak(container); // line break
 }
-function appendScore(section, container)
+function appendScore(song, container)
 {
-    var ePRE = appendTag(TAG.pre, container);
+    var pre = appendTag(TAG.PRE, container);
     var transposition = [];
     var t = {}; // each item of transposition
     var ss = {};
@@ -343,7 +319,7 @@ function appendScore(section, container)
     var lnl = 0; // line number of lyrics
     var lc = {}; // a line of chords
     var ll = ""; // a line of lyrics
-    for (ss of section.score)
+    for (ss of song.score)
     {
         t =
         {
@@ -353,11 +329,11 @@ function appendScore(section, container)
         }
         for (sc of ss.chords)
         {
-            if (FIRST != lnl) appendBreak(ePRE); // paragraph break
+            if (FIRST != lnl) appendBreak(pre); // paragraph break
             for (lc of sc)
             {
-                ll = section.lyrics[lnl].replace(/  /g, FWS); // replace 2 white spaces with a FWS if such spaces exist
-                appendLine(lc, ll, t.collection, ePRE);
+                ll = song.lyrics[lnl].replace(/  /g, FWS); // replace 2 white spaces with a FWS if such spaces exist
+                appendLine(lc, ll, t.collection, pre);
                 lnl++;
             }
         }
@@ -367,25 +343,25 @@ function appendScore(section, container)
 }
 function appendParagraph(prefix, which, parent, container) // preface, postscript or comment
 {
-    var eP;
+    var p;
     if (which in parent)
     {
-        eP = appendTag(TAG.p, container);
-        appendRecursively(prefix, parent[which], eP);
+        p = appendTag(TAG.P, container);
+        appendRecursively(prefix, parent[which], p);
     }
 }
-function appendSection(section, language, container)
+function appendSection(song, language, container)
 {
-    var eSECTION = appendTag(TAG.section, container);
-    var eDL = appendTag(TAG.dl, eSECTION);
-    var eDT;
-    var eSELECT;
-    var eOPTION;
+    var section = appendTag(TAG.SECTION, container);
+    var dl = appendTag(TAG.DL, section);
+    var dt;
+    var select;
+    var option;
     var keys = {original: "", arranged: ""};
     var which = ""; // original or arranged key
     var key = "";
     var i;
-    var transposition = appendScore(section, eSECTION);
+    var transposition = appendScore(song, section);
     var t = transposition[FIRST]; // used as the 1st item, or each one of "transposition"
     var difference = limit2interval // difference between arranged & original key
                         (
@@ -398,140 +374,132 @@ function appendSection(section, language, container)
         for (which in keys) keys[which] += reverseNote(KEY.TONALITY[t[which]]) + ARROW;
     for ([which, key] of Object.entries(keys))
     {
-        eDT = appendDT8colon(which, language, eDL);
-        appendSpecialString(key.slice(0, -1), eDT); // remove the last ARROW
+        dt = appendTerm(which, language, dl);
+        appendSpecialString(key.slice(0, -1), dt); // remove the last arrow
     }
 // transposition
-    eDT = appendDT8colon("transpose", language, eDL);
-    eSELECT = appendTag(TAG.select, eDT);
+    dt = appendTerm("transpose", language, dl);
+    select = appendTag(TAG.SELECT, dt);
     for (i = TRANSPOSITION.MIN; i <= TRANSPOSITION.MAX; i++)
     {
-        eOPTION = appendTag8text(TAG.option, i > 0 ? "+" + i : i, eSELECT);
-        eOPTION.value = i;
-        if (difference == i) eOPTION.selected = true;
+        option = appendTag8text(TAG.OPTION, i > 0 ? "+" + i : i, select);
+        option.value = i;
+        if (difference == i) option.selected = true;
     }
-    eSELECT.onchange = function()
-    {
-        transpose(parseInt(this.value) - difference, transposition);
-    };
+    select.onchange = function()
+                        {
+                            transpose(parseInt(this.value) - difference, transposition);
+                        };
 }
 function appendArticle(page, bookmark, container)
 {
-    var eARTICLE = appendTag(TAG.article, container);
-    var eH2 = appendTag(TAG.h2, eARTICLE);
-    var eDETAILS;
+    var article = appendTag(TAG.ARTICLE, container);
+    var h2 = appendTag(TAG.H2, article);
+    var details;
     var song = page.information.main[bookmark];
     var pa = page.addition;
     var language = COVER in song ? song.cover : pa.language;
-    var eA = appendTag8text(TAG.a, song.h2, eH2);
-    var sd = {}; // song.details if exists
+    var a = appendTag8text(TAG.A, song.h2, h2);
+    var sd = song.details;
+    var sdd = sd.demo;
     var multiMedia;
-    eARTICLE.id = bookmark; // create bookmarks with ID attribute
-    eA.href = link2bookmark(TAG.aside); // jump to the top of aside when h2 is clicked
-    appendParagraph(pa.prefix, "preface", song, eARTICLE);
-    appendSection(song.section, language, eARTICLE);
-    appendParagraph(pa.prefix, "postscript", song, eARTICLE);
+    article.id = bookmark; // create bookmarks with ID attribute
+    a.href = link2bookmark(TAG.ASIDE); // jump to the top of aside when h2 is clicked
+    appendParagraph(pa.prefix, "preface", song, article);
+    appendSection(song.section, language, article);
+    appendParagraph(pa.prefix, "postscript", song, article);
 // demo
-    eDETAILS = appendTag(TAG.details, eARTICLE);
-    appendTag8text(TAG.summary, DICTIONARY.demo[language], eDETAILS);
-    if (TAG.details in song)
-    {
-        sd = song.details;
-        if ("demo" in sd)
-        {
-            multiMedia = appendTag(sd.demo, eDETAILS);
-            multiMedia.src = getLink(pa.prefix, sd.demo, pa.path + SLASH + bookmark);
-            multiMedia.controls = true;
-            multiMedia.onmouseenter = function()
-            {
-                multiMedia.play();
-            };
-        }
-        appendParagraph(pa.prefix, "comment", sd, eDETAILS);
-    }
-    else appendTag8text(TAG.p, DICTIONARY.unavailable[language], eDETAILS);
+    details = appendTag(TAG.DETAILS, article);
+    appendTag8text(TAG.SUMMARY, DICTIONARY.demo[language], details);
+    multiMedia = appendTag(sdd, details);
+    multiMedia.src = getLink(pa.prefix, sdd, pa.path + "/" + bookmark);
+    multiMedia.controls = true;
+    multiMedia.onmouseenter = function()
+                                {
+                                    multiMedia.play();
+                                };
+    appendParagraph(pa.prefix, "comment", sd, details);
 }
 function appendMenus(addition, path, parent, container) // create menus recursively
 {
-    var eUL = appendTag(TAG.ul, container);
-    var eLI;
-    var eA;
+    var ul = appendTag(TAG.UL, container);
+    var li;
+    var a;
     var menu = "";
     var child = {};
-    var cp = ""; // current path
+    var current = ""; // current path
     for ([menu, child] of Object.entries(parent))
     {
-        eLI = appendTag(TAG.li, eUL);
-        eA = appendTag8text(TAG.a, child.nav, eLI);
-        cp = path + menu;
-        if (addition.top === cp)
+        li = appendTag(TAG.LI, ul);
+        a = appendTag8text(TAG.A, child.nav, li);
+        current = path + menu;
+        if (addition.top === current)
         {
-            eLI.style.backgroundColor = "crimson";
-            eLI.style.color = "gold";
+            li.style.backgroundColor = "crimson";
+            li.style.color = "gold";
         }
-        if (CLASSIFICATION in child) appendMenus(addition, cp + SLASH, child.classification, eLI);
+        if (CLASSIFICATION in child) appendMenus(addition, current + "/", child.classification, li);
         else
-            if (addition.path !== cp) eA.href = getLink(addition.prefix, PAGE, cp);
+            if (addition.path !== current) a.href = getLink(addition.prefix, PAGE, current);
     }
 }
 function createMain(page)
 {
-    var eMAIN = appendTag(TAG.main, document.body);
+    var main = appendTag(TAG.MAIN, document.body);
     var songs = page.information.main;
     var bookmarks = Object.keys(songs);
     var b1s = bookmarks.shift(); // bookmark of the first song
     var first = songs[b1s];
     var bookmark = "";
     first.h2 += DICTIONARY.arrival[COVER in first ? first.cover : page.addition.language];
-    appendArticle(page, b1s, eMAIN); // append the first song
-    for (bookmark of shuffle(bookmarks)) appendArticle(page, bookmark, eMAIN); // append the rest
+    appendArticle(page, b1s, main); // append the first song
+    for (bookmark of shuffle(bookmarks)) appendArticle(page, bookmark, main); // append the rest
 }
 function createAside(page)
 {
-    var eASIDE = appendTag(TAG.aside, document.body);
-    var eOL = appendTag(TAG.ol, eASIDE);
-    var eSMALL;
-    var eLI;
-    var eA;
+    var aside = appendTag(TAG.ASIDE, document.body);
+    var ol = appendTag(TAG.OL, aside);
+    var small;
+    var li;
+    var a;
     var id = "";
     var song = {};
     var pa = page.addition;
-    eASIDE.id = TAG.aside; // create bookmarks so that the page can jump to the top of aside
+    aside.id = TAG.ASIDE; // create bookmarks so that the page can jump to the top of aside
     for ([id, song] of Object.entries(page.information.main))
     {
-        eLI = appendTag(TAG.li, eOL);
-        eA = appendTag8text(TAG.a, song.h2, eLI);
-        eA.href = link2bookmark(id);
+        li = appendTag(TAG.LI, ol);
+        a = appendTag8text(TAG.A, song.h2, li);
+        a.href = link2bookmark(id);
     }
-    appendTag8text(TAG.h3, DICTIONARY.notice[pa.language], eASIDE);
-    eSMALL = appendTag(TAG.small, eASIDE);
-    appendRecursively(pa.prefix, DICTIONARY.aside[pa.language], eSMALL);
+    appendTag8text(TAG.H3, DICTIONARY.notice[pa.language], aside);
+    small = appendTag(TAG.SMALL, aside);
+    appendRecursively(pa.prefix, DICTIONARY.aside[pa.language], small);
 }
 function createFooter(addition)
 {
-    var eFOOTER = appendTag(TAG.footer, document.body);
-    var eSMALL = appendTag(TAG.small, eFOOTER);
-    appendRecursively(addition.prefix, DICTIONARY.footer[addition.language], eSMALL);
+    var footer = appendTag(TAG.FOOTER, document.body);
+    var small = appendTag(TAG.SMALL, footer);
+    appendRecursively(addition.prefix, DICTIONARY.footer[addition.language], small);
 }
 function createPage(url)
 {
-    var eLINK = appendTag(TAG.link, document.head);
-    var eNAV = appendTag(TAG.nav, document.body);
-    var eHEADER = appendTag(TAG.header, document.body);
+    var link = appendTag(TAG.LINK, document.head);
+    var nav = appendTag(TAG.NAV, document.body);
+    var header = appendTag(TAG.HEADER, document.body);
     var page = getPage(url);
     var pa = page.addition;
-// link CSS
-    eLINK.rel = "stylesheet";
-    eLINK.type = "text/css";
-    eLINK.href = getLink(pa.prefix, "css", "arrangement");
+// link CSS///to add icon: <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    link.rel = "stylesheet";
+    link.href = getLink(pa.prefix, "css", "sidebar");
 // title
     document.title = page.information.header.h1;
 // create nav
-    appendMenus(pa, "", DATA, eNAV);
+    appendMenus(pa, "", DATA, nav);
 // create header
-    appendTag8text(TAG.h1, document.title, eHEADER);
+    appendTag8text(TAG.H1, document.title, header);
 // create other containers
     createMain(page);
     createAside(page);
     createFooter(pa);
-}
+}///!!!new styles to be added: Parallax Scrolling, Ribbon

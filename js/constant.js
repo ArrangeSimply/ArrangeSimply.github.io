@@ -1,15 +1,13 @@
 // keys
 const ACCIDENTAL =
-{ // (NATURA)L
+{
+    L: 0, // (NATURA)L
     P: "\u266F", // (SHAR)P
-    T: "\u266D", // (FLA)T
-    NATURAL: 0,
-    SHARP: 1,
-    FLAT: 2
+    T: "\u266D" // (FLA)T
 };
 const KEY =
 {
-    ET: 0, // equal temperament (major: O~Z; minor: o~z)
+    TET12: 0, // twelve-tone equal temperament (major: O~Z; minor: o~z)
     ACCIDENTAL: 0, // L, P, T
     SOLFEGE: 1, // solfège (major: A~G; minor: a~g)
     TONALITY:
@@ -53,9 +51,26 @@ const TRANSPOSITION =
     Z: 90, // ASCII of Z
     o: 111, // ASCII of o
     z: 122, // ASCII of z
-    TET12: 12, // 12-tone equal temperament
+    TET12: 12, // twelve-tone equal temperament
     MAX: 5, // upper bound of changeable keys
     MIN: -6 // lower bound of changeable keys
+}
+const CIRCLE5 = // Circle of fifths
+{
+// flat
+    O: 2, o: 2, //  C ~ a
+    T: 2, t: 2, //  F ~ d
+    Y: 2, y: 2, // ♭B ~ g
+    R: 2, r: 2, // ♭E ~ c
+    W: 2, w: 2, // ♭A ~ f
+    P: 2, p: 2, // ♭D ~ b♭
+// sharp
+    V: 1, v: 1, //  G ~ e
+    Q: 1, q: 1, //  D ~ b
+    X: 1, x: 1, //  A ~ f♯
+    S: 1, s: 1, //  E ~ c♯
+    Z: 1, z: 1, //  B ~ g♯
+    U: 1, u: 1  // ♯F ~ d♯
 }
 // chords
 const CHORD =
@@ -314,38 +329,38 @@ const ELEMENT =
 }
 const TAG =
 {
-    a: "a",
-    article: "article",
-    aside: "aside",
-    audio: "audio",
-    br: "br",
-    details: "details",
-    dl: "dl",
-    dt: "dt",
-    footer: "footer",
-    h1: "h1",
-    h2: "h2",
-    h3: "h3",
-    header: "header",
-    li: "li",
-    link: "link",
-    main: "main",
-    nav: "nav",
-    ol: "ol",
-    option: "option",
-    p: "p",
-    pre: "pre",
-    q: "q",
-    rt: "rt",
-    ruby: "ruby",
-    section: "section",
-    select: "select",
-    small: "small",
-    span: "span",
-    summary: "summary",
-    sup: "sup",
-    ul: "ul",
-    video: "video",
+    A: "a",
+    ARTICLE: "article",
+    ASIDE: "aside",
+    AUDIO: "audio",
+    BR: "br",
+    DETAILS: "details",
+    DL: "dl",
+    DT: "dt",
+    FOOTER: "footer",
+    H1: "h1",
+    H2: "h2",
+    H3: "h3",
+    HEADER: "header",
+    LI: "li",
+    LINK: "link",
+    MAIN: "main",
+    NAV: "nav",
+    OL: "ol",
+    OPTION: "option",
+    P: "p",
+    PRE: "pre",
+    Q: "q",
+    RT: "rt",
+    RUBY: "ruby",
+    SECTION: "section",
+    SELECT: "select",
+    SMALL: "small",
+    SPAN: "span",
+    SUMMARY: "summary",
+    SUP: "sup",
+    UL: "ul",
+    VIDEO: "video",
 // derivatives
     ALP: "ALP", // Another Local Page
     BoA: "BoA", // Bookmark on ALP
@@ -355,22 +370,39 @@ const TAG =
     J2C: "J2C", // jump to the COLLABORATORs
     PB: "PB" // Paragraph Break
 };
-const LB = [TAG.br]; // Line Break
+const LB = [TAG.BR]; // Line Break
 const PB = [TAG.PB];
-// prefix
+// URL
 const UP1 = "../";
 const UP2 = UP1 + UP1;
-const FileType =
+const PREFIX = // lower-case
+{
+    de: UP1,
+    en: UP2,
+    fr: UP1,
+    ja: UP1,
+    ko: UP1,
+    zh: UP2
+};
+const FileType = // lower-case
 {
     audio: "mp3",
     video: "mp4",
-    page: "html"
+    page: "html",
+    css: "css"
 };
 const ADDRESS =
 {
     GitHub: "https://github.com",
     HomePage: "index.html"
 };
+// others
+const FIRST = 0;
+const CLASSIFICATION = "classification";
+const COVER = "cover";
+const PAGE = "page";
+const STRING = "string";
+const ARROW = "\u2192";
 const EMOJI =
 {
     ANGRY: " (๑`^´๑)",
@@ -384,14 +416,6 @@ const EMOJI =
     SMILE: " (╹▽╹)",
     SURPRISE: " (ﾉﾟοﾟ)ﾉ"
 };
-const SLASH = "/";
-const DOT = ".";
-const ARROW = "\u2192";
-const FIRST = 0;
-const PAGE = "page";
-const CLASSIFICATION = "classification";
-const STRING = "string";
-const COVER = "cover";
 const DICTIONARY =
 {
     arranged: // arranged in the key of
@@ -426,7 +450,7 @@ const DICTIONARY =
             "How frustrated you felt after you had tried to play it several times but failed to do it well! " +
             "The score which you found might be",
             [
-                TAG.ul,
+                TAG.UL,
                 [
                     [
                         "difficult. (In fact, it is hardly possible.)", LB,
@@ -437,7 +461,7 @@ const DICTIONARY =
                         "Are you still a beginner? Is it boring that only ABCDEFG(m)(7) are always played? " +
                         "Because the level of score-maker is:",
                         [
-                            TAG.ul,
+                            TAG.UL,
                             [
                                 "low after all.",
                                 [
@@ -464,7 +488,7 @@ const DICTIONARY =
             "after hearing melodies, despite having received no formal training in music. How incredible!", LB,
             "Our site is called ",
             [
-                TAG.q,
+                TAG.Q,
                 [[TAG.HP, "(Arrange)Simply"]],
             ],
             " because only chord-names are available. " +
@@ -473,7 +497,7 @@ const DICTIONARY =
             "The idea of developing a better front-end framework evolved from the deficiencies of other websites " +
             "where chords are not aligned with lyrics. " +
             "First of all, it is fashionable for a programmer to contribute to open-source projects on ",
-            [TAG.a, "GitHub", ADDRESS.GitHub],
+            [TAG.A, "GitHub", ADDRESS.GitHub],
             ". Next it is helpful in improving the skills of web programming (HTML/CSS/JS). " +
             "Last but not least, it is convenient for music lovers to create chord-scores themselves. " +
             "If you are asked to perform at a party, it is a pity that you cannot do without (remembering) scores, " +
@@ -483,14 +507,14 @@ const DICTIONARY =
             "The keys of major songs are in upper-case letters and those of minor ones in lower-case. " +
             "If accidentals exist, they are put on the right side of pitches, formatted as superscripts. " +
             "Original keys are for reference only; The keys, in which songs are arranged, are decided by the ",
-            [TAG.J2C, "arranger"], ". If you want to change keys, use the function of ", [TAG.q, "transposition"],
+            [TAG.J2C, "arranger"], ". If you want to change keys, use the function of ", [TAG.Q, "transposition"],
             " on each page, which seems superior to those at other websites! " +
             "Our framework also supports the songs including modulation recently. " +
-            "Tonics are connected with arrows in the ", [TAG.q, "Original"], " or ", [TAG.q, "Arranged"],
+            "Tonics are connected with arrows in the ", [TAG.Q, "Original"], " or ", [TAG.Q, "Arranged"],
             " keys. In addition, those songs can be transposed perfectly!", LB,
             "There are various styles in writing names of chords. At our site they are done as follows:",
             [
-                TAG.ul,
+                TAG.UL,
                 [
                     [
                         "Symbols", LB,
@@ -501,12 +525,12 @@ const DICTIONARY =
                         "Those in roots or basses are written as superscripts on the left or right, respectively. " +
                         "The following forms:", LB,
                         ACCIDENTAL.P + "H/I" + ACCIDENTAL.P + ", ",
-                        [TAG.sup, ACCIDENTAL.P], "J/",
-                        [TAG.sup, ACCIDENTAL.T], "K, L",
-                        [TAG.sup, ACCIDENTAL.T], "/",
-                        [TAG.sup, ACCIDENTAL.T], "M, N",
-                        [TAG.sup, ACCIDENTAL.T], "/O",
-                        [TAG.sup, ACCIDENTAL.P], LB,
+                        [TAG.SUP, ACCIDENTAL.P], "J/",
+                        [TAG.SUP, ACCIDENTAL.T], "K, L",
+                        [TAG.SUP, ACCIDENTAL.T], "/",
+                        [TAG.SUP, ACCIDENTAL.T], "M, N",
+                        [TAG.SUP, ACCIDENTAL.T], "/O",
+                        [TAG.SUP, ACCIDENTAL.P], LB,
                         "are not used. But " +
                         ACCIDENTAL.T + " in a half-diminished chord is not displayed as a superscript."
                     ],
@@ -517,7 +541,7 @@ const DICTIONARY =
                 ]
             ],
             "Stave or tablature is not supported for the time being. But ",
-            [TAG.q, "ASCII tab"], " may be considered in the future.", PB,
+            [TAG.Q, "ASCII tab"], " may be considered in the future.", PB,
             "Last but not least, we are extremely grateful to the following collaborators -",
             [
                 TAG.COLLABORATORS,
@@ -544,7 +568,7 @@ const DICTIONARY =
             "弾き語りの前、きっとネットで楽譜を探してみるだろうね！見つけた時、うれしかったね。" +
             "やってみたが、なかなかできなかったか？どうしたか？見つけた楽譜は",
             [
-                TAG.ul,
+                TAG.UL,
                 [
                     [
                         "難しい。（実は可能性が低い）", LB,
@@ -554,7 +578,7 @@ const DICTIONARY =
                         "簡単すぎる。", LB,
                         "いつもABCDEFG(m)(7)で弾くなんて、初心者みたいな。スコアを発表した人は",
                         [
-                            TAG.ul,
+                            TAG.UL,
                             [
                                 "レベルが低い。",
                                 [
@@ -581,7 +605,7 @@ const DICTIONARY =
             "しかし、初心者と区別するため、必ずしも基本コードだけを使うとは限らない。", LB,
             "実は難しくない！やればできるはずである。", PB,
             "楽譜の専門サイトにいくつかアクセスしたが、たいていコード名と歌詞はばらばらになってしまい、本当に読みにくいため、" +
-            "自分でフロントエンド・フレームワークを作成することにした。一つには", [TAG.a, "GitHub", ADDRESS.GitHub],
+            "自分でフロントエンド・フレームワークを作成することにした。一つには", [TAG.A, "GitHub", ADDRESS.GitHub],
             "を使ってみて、オープン・ソース・プロジェクトの貢献者になる。二つにはWebプログラミング（HTML/CSS/JS）を練習する。" +
             "三つには自分でコード譜が楽に作成できる。これは主な目的である！もしパーティーでパフォーマンスを依頼された場合、" +
             "暗譜で披露できなければ、惜しい！今は大丈夫である。スマホを出して……", LB,
@@ -592,7 +616,7 @@ const DICTIONARY =
             "本フレームワークは大幅に更新されたばかりである。各キーは矢印でつながる。ちなみに、そのような曲も完璧に移調できる！", LB,
             "コード名については、各サイトにより異なるため、本サイトにおける書き方を説明する：",
             [
-                TAG.ul,
+                TAG.UL,
                 [
                     [
                         "記号", LB,
@@ -603,12 +627,12 @@ const DICTIONARY =
                         "上付き文字で表示する。ルートとベース音における変化記号は、別々に左と右側に書いてある。" +
                         "すなわち、以下のような書き方：", LB,
                         ACCIDENTAL.P + "H/I" + ACCIDENTAL.P + "、",
-                        [TAG.sup, ACCIDENTAL.P], "J/",
-                        [TAG.sup, ACCIDENTAL.T], "K、L",
-                        [TAG.sup, ACCIDENTAL.T], "/",
-                        [TAG.sup, ACCIDENTAL.T], "M、N",
-                        [TAG.sup, ACCIDENTAL.T], "/O",
-                        [TAG.sup, ACCIDENTAL.P], LB,
+                        [TAG.SUP, ACCIDENTAL.P], "J/",
+                        [TAG.SUP, ACCIDENTAL.T], "K、L",
+                        [TAG.SUP, ACCIDENTAL.T], "/",
+                        [TAG.SUP, ACCIDENTAL.T], "M、N",
+                        [TAG.SUP, ACCIDENTAL.T], "/O",
+                        [TAG.SUP, ACCIDENTAL.P], LB,
                         "は使用しない。一方で、減五短七の和音における" + ACCIDENTAL.T + "は上付きではない。"
                     ],
                     [
@@ -645,7 +669,7 @@ const DICTIONARY =
             "当你想弹某首歌时，一定会去网上找谱吧？（嗨，大家都是这么过来的！）搜到乐谱的那一刻，开心吧？" +
             "（弹完觉得很满足，这种情况咱就不讨论了；）练了几下，发现不对路子，失落喽！那你找的谱子大概是：",
             [
-                TAG.ul,
+                TAG.UL,
                 [
                     [
                         "太难。（其实这种情况并不多见，具体原因在下一种情况中会提及。）", LB,
@@ -655,7 +679,7 @@ const DICTIONARY =
                         "小儿科。", LB,
                         "弹来弹去ABCDEFG(m)(7)，跟个初学者似的，一点儿也没意思！原因取决于记谱者：",
                         [
-                            TAG.ul,
+                            TAG.UL,
                             [
                                 "本身水平就有限。",
                                 [
@@ -685,7 +709,7 @@ const DICTIONARY =
             "不过为了摆脱初学者的队伍，和弦配得并不简单哟！而且尽可能避开各大乐谱网站与教学视频里提及的所谓《万能伴奏》。", LB,
             "其实没什么难的，相信你也可以做到！", PB,
             "看到其它网站发布的谱子上，和弦名与歌词对得参差不齐、歪歪扭扭的样子，萌生了自己动手写个前端框架的念头。一来是赶赶时髦，学着用",
-            [TAG.a, "GitHub", ADDRESS.GitHub], "。借着这样一个平台，加入到开源队伍中；二来嘛，练练Web三件套（HTML/CSS/JS）；" +
+            [TAG.A, "GitHub", ADDRESS.GitHub], "。借着这样一个平台，加入到开源队伍中；二来嘛，练练Web三件套（HTML/CSS/JS）；" +
             "再者自己制谱也方便，这才是开源者的主要目的！在外聚会、交友时遇到被要求即兴表演助兴的场合，因不记得谱而无法献技，" +
             "岂不把我们桃花岛的脸都丢尽了？现在好啦，掏出手机……", LB,
             "目前所完成的功能中，只对应了和弦谱的输入。本框架选用合适的编程技术，力求将和弦名与歌词对得精准。", LB,
@@ -694,7 +718,7 @@ const DICTIONARY =
             "至于歌曲中有“转调”的情况，本框架也新增了大招对应——原调和选调中会有箭头连接各调号，并且也能完美变调！", LB,
             "鉴于一部分和弦名有多种写法，有必要对本站采用的符号和名称进行一下说明：",
             [
-                TAG.ul,
+                TAG.UL,
                 [
                     [
                         "缩略符号", LB,
@@ -704,12 +728,12 @@ const DICTIONARY =
                         "升降号", LB,
                         "上标显示。根音中的升降号写在左边；低音的则在右。这样貌似好看点儿？不使用形如：", LB,
                         ACCIDENTAL.P + "H/I" + ACCIDENTAL.P + "、",
-                        [TAG.sup, ACCIDENTAL.P], "J/",
-                        [TAG.sup, ACCIDENTAL.T], "K、L",
-                        [TAG.sup, ACCIDENTAL.T], "/",
-                        [TAG.sup, ACCIDENTAL.T], "M、N",
-                        [TAG.sup, ACCIDENTAL.T], "/O",
-                        [TAG.sup, ACCIDENTAL.P], LB,
+                        [TAG.SUP, ACCIDENTAL.P], "J/",
+                        [TAG.SUP, ACCIDENTAL.T], "K、L",
+                        [TAG.SUP, ACCIDENTAL.T], "/",
+                        [TAG.SUP, ACCIDENTAL.T], "M、N",
+                        [TAG.SUP, ACCIDENTAL.T], "/O",
+                        [TAG.SUP, ACCIDENTAL.P], LB,
                         "的名儿。但半减和弦中的" + ACCIDENTAL.T + "不用上标。"
                     ],
                     [
@@ -823,14 +847,5 @@ const DICTIONARY =
         ja: "移調",
         ko: "변경",
         zh: "变调"
-    },
-    unavailable:
-    {
-        de: "...",
-        en: "(unavailable)",
-        fr: "...",
-        ja: "（未登録）",
-        ko: "...",
-        zh: "（暂无）"
     }
 }

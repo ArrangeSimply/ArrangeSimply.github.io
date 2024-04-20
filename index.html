@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="css/arrangement.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
     <script src="js/constant.js"></script>
     <script src="js/database.js"></script>
     <script src="js/function.js"></script>
@@ -64,11 +64,11 @@
         </h2>
         <section>
 <script>
-var arrival = DATA.gequ;
+var ins = DATA.gequ; // information of new song
 appendScore
 (
-    (CLASSIFICATION in arrival ? arrival.classification.xjp.main : arrival.main).CXCWCYD.section,
-    document.getElementsByTagName(TAG.section)[FIRST]
+    (CLASSIFICATION in ins ? ins.classification.xjp.main : ins.main).CXCWCYD.section,
+    document.getElementsByTagName(TAG.SECTION)[FIRST]
 );
 </script>
         </section>
@@ -105,21 +105,9 @@ appendScore
     <footer>
       <small>
 <script>
-var prefix = "";
-switch (arrival.language)
-{
-    case "en":
-    case "zh":
-        prefix = UP2;
-        break;
-    case "de":
-    case "fr":
-    case "ja":
-    case "ko":
-        prefix = UP1;
-}
-var as = document.getElementsByTagName(TAG.small); // all SMALLs
-appendRecursively(prefix, DICTIONARY.footer[arrival.language], as[as.length - 1]);
+var lns = ins.language; // language of new song
+var as = document.getElementsByTagName(TAG.SMALL); // all SMALLs
+appendRecursively(PREFIX[lns], DICTIONARY.footer[lns], as[as.length - 1]);
 </script>
       </small>
     </footer>

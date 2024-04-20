@@ -64,7 +64,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "各版本的前奏大多是把高潮改一改，就拿来用了。直到看了2011年在CCTV任、吴两位老师再次合作的视频，" +
@@ -134,7 +134,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "……", LB,
@@ -194,7 +194,7 @@ const DATA =
                         postscript: "增、减3的效果好像还不错噢？",
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "前奏里加了几个经过音。"
                         }
                     },
@@ -274,7 +274,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏音太高了？低了不太好编。", LB,
@@ -341,7 +341,7 @@ const DATA =
                             "曲风很特别，不像是传统大陆歌！因此某些《大招》就可以施展出来了" + EMOJI.HAPPY, PB,
                             "两个《套餐》蛮有味道的噢？",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     [
                                         "Asus2" + ARROW + "Aaug" + ARROW + "D", LB,
@@ -359,7 +359,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "最后一句词儿可以再唱1遍，作为结束句。"
                         }
                     },
@@ -413,7 +413,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "前奏蛮特别的！有好几个半音。"
                         }
                     },
@@ -502,7 +502,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏中的半音蛮有味道！", LB,
@@ -593,7 +593,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏中的半音蛮有味道！", LB,
@@ -608,13 +608,13 @@ const DATA =
                         [
                             "有几处和片头字幕不同：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "“……里（的）一束……”，补上了“的”；",
                                     [
                                         "“（不知不觉）成为你的永远”中有2处用词重复，后半句全改了！",
                                         [
-                                            TAG.ul,
+                                            TAG.UL,
                                             [
                                                 "“成为”上一句用过了；",
                                                 "“永远”前后都用了。"
@@ -679,7 +679,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏很吸引人！几个简单的和弦，也能编出好的旋律" + EMOJI.SURPRISE, LB,
@@ -753,7 +753,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "一般不选较为麻烦的E调。但这个前奏有点儿特殊，用别的调编起来不是很方便。", LB,
@@ -769,7 +769,7 @@ const DATA =
                             "原曲叫《守护明天》，朱老师唱得很有味道！", LB,
                             "电视原声是精简版，听完后有两点感受颇深：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "这名儿不太对吧？歌词倒是和片名很搭！但直接把片名拿来当歌名，好像长了点儿？" +
                                     "此处就将高潮中反复唱到的词儿，来作歌名用了。",
@@ -779,7 +779,7 @@ const DATA =
                             "听完专辑版后，俩疑问都解决了……" + EMOJI.SURPRISE, PB,
                             "演唱时有几处要注意：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "“（英）雄不能”要用念白；",
                                     "“狗”要唱得夸张些；",
@@ -847,7 +847,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前秦比专辑版少了几个小节。", PB,
@@ -936,7 +936,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.video, // Ep12 1:22.1~2:2.6
+                            demo: TAG.VIDEO, // Ep12 1:22.1~2:2.6
                             comment:
                             [
                                 "第2句中的第2个“玫瑰”略带哭腔，唱得很有味道！", LB,
@@ -1015,7 +1015,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏的第1句和主歌的第1句略有不同。", LB,
@@ -1086,7 +1086,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "为了方便记谱，前奏开头几小节的拍号作了调整。", LB,
@@ -1165,7 +1165,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏还有待改进！", LB,///
@@ -1223,7 +1223,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏第1句里可以加个高音，也蛮有味道的。", LB,
@@ -1289,7 +1289,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏第1句里可以加个高音，也蛮有味道的。", LB,
@@ -1306,7 +1306,7 @@ const DATA =
                             "With 100 days to go before the Beijing 2022 Winter Olympics, " +
                             "the first English song for the Olympics was released, " +
                             "which is the cover of a pleasant Chinese song - ",
-                            [TAG.q, "你笑起来真好看 / You Look Nice When Smiling"], DOT
+                            [TAG.Q, "你笑起来真好看 / You Look Nice When Smiling"], "."
                         ],
                         section:
                         {
@@ -1372,7 +1372,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "The demo was arranged on the basis of the Chinese version.", LB,
@@ -1388,7 +1388,7 @@ const DATA =
                         [
                             "歌词有两套！这里选的是第6集片头的词儿，其它集都是另一套版本。说下几处不同：", LB,
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "第1句的俩叠词：平平常常、普普通通",
                                     "副歌的第2句：紧抓住那机遇，成竹在胸",
@@ -1445,7 +1445,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏第1句里可以加个高音，也蛮有味道的。", LB,
@@ -1461,7 +1461,7 @@ const DATA =
                             "本以为原唱有几处咬字不清，闹了半天是某些网站和视频提供的词儿不对！" +
                             "否则数姊々错得也太低级了吧" + EMOJI.CANNOT,
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "任性：担心",
                                     "只：却",
@@ -1521,7 +1521,7 @@ const DATA =
                         postscript: "Em7/B换成E7sus2也行。",
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "前奏可当尾奏用，示范中简化了。"
                         }
                     }
@@ -1540,7 +1540,7 @@ const DATA =
                         [
                             "歌名到底是偏喜还是偏悲？无梦，作何解？",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "不是梦（喜）",
                                     "别梦想（悲）"
@@ -1611,7 +1611,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏的最后和尾奏的最初都有重复的小节，各保留1个。", LB,
@@ -1691,7 +1691,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "原曲的前奏和副歌一模一样！是赶工还是咋的" + EMOJI.SURPRISE, LB,
@@ -1781,7 +1781,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏还凑合？", LB,
@@ -1796,7 +1796,7 @@ const DATA =
                         [
                             "歌名是即兴取的。", PB,
                             "网上只找到一个相关",
-                            [TAG.a, "页面", "https://zhidao.baidu.com/question/651740046295640485.html"],
+                            [TAG.A, "页面", "https://zhidao.baidu.com/question/651740046295640485.html"],
                             "，歌词也是从那儿抄来的。", LB,
                             "缺少的词儿由", [TAG.J2C, "粤语指导老师"], "补全" + EMOJI.HAPPY
                         ],
@@ -1862,7 +1862,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.video, // Ep.5 11:56.4 ~ 12:54
+                            demo: TAG.VIDEO, // Ep.5 11:56.4 ~ 12:54
                             comment:
                             [
                                 "边拉边唱，这也可以？", PB,
@@ -1879,12 +1879,12 @@ const DATA =
                             "由《四大才子》及其配偶的8位扮演者一起唱的，阵容强大！", PB,
                             "说下俩版本的差异：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     [
                                         "电视原声",
                                         [
-                                            TAG.ul,
+                                            TAG.UL,
                                             [
                                                 "第3句由魏、林2人合唱；",
                                                 "女声第2个演唱的是虹姐，伶姐唱第4句。"
@@ -1894,7 +1894,7 @@ const DATA =
                                     [
                                         "专辑",
                                         [
-                                            TAG.ul,
+                                            TAG.UL,
                                             [
                                                 "第1段中魏、林分别唱前、后半句；",
                                                 "女声2、4句的演唱者则和上面相反。"
@@ -1952,7 +1952,7 @@ const DATA =
                         postscript: "主歌基本是1小节俩和弦；后面大都是每小节1个。",
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "尾奏只弹1段也行。"
                         }
                     },
@@ -1964,7 +1964,7 @@ const DATA =
                             "好歌没有被专辑收录，可惜啊！而且只唱一遍，短了点儿。", PB,
                             "找了几处的歌词，都有些差异，简单分析下……",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "遭／祝：读音有点儿像，但前者表转折，更贴切；",
                                     "航／行：读音相同，意思也都通。但提到风雨，可能是在海上？",
@@ -2015,7 +2015,7 @@ const DATA =
                             "Gm7似乎不太好？Gm6还不错？", PB,
                             "两个《套餐》蛮有味道的噢？",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "F" + ARROW + "Am7/E" + ARROW + "Dm",
                                     "Am7/E" + ARROW + "Gm7" + ARROW + "C"
@@ -2024,7 +2024,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏很优美！剧中一播放，就被其吸引" + EMOJI.HAPPY, LB,
@@ -2109,7 +2109,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "为了方便记谱，把小节长度作了统一。", LB,
@@ -2189,7 +2189,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "“风霜约”一般人还真的唱不了？实在上不去，可以低8度唱；", LB,
@@ -2279,7 +2279,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "点题句用的是原曲第2遍中的旋律。和第1遍相比，前半句里有小转音。"
                         }
                     },
@@ -2324,7 +2324,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.video, // Ep19 4:31.2~5:15
+                            demo: TAG.VIDEO, // Ep19 4:31.2~5:15
                             comment:
                             [
                                 "澎老师唱得真好啊，琴弹得更好！", LB,
@@ -2410,7 +2410,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏中旋律雷同的小节就省略了。", LB,
@@ -2471,7 +2471,7 @@ const DATA =
                         postscript: "每小节配1个和弦，难度有点儿大噢？不如折成俩？",
                         details:
                         {
-                            demo: TAG.video, // Ep.14 23:33.7 ~ 25:13.9
+                            demo: TAG.VIDEO, // Ep.14 23:33.7 ~ 25:13.9
                             comment:
                             [
                                 "应该是演员本人唱的，杨老师也是有名的歌手！", LB,
@@ -2490,7 +2490,7 @@ const DATA =
                             "数前年“好妹妹”用剧中第1次出现的词儿将它翻唱，所以现在大家都称之为《青城山下白素贞》。", PB,
                             "主歌有4段，只有最后1段的最后1个小节旋律不同，其它都一样，所以省略了2段。其中每段的第2句有点儿难度：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "第2个字要4转音，唱不到位就别唱这歌了；",
                                     "第4个字不能唱成单音，否则听起来总不是最好。"
@@ -2541,7 +2541,7 @@ const DATA =
                         [
                             "高潮中有2处可以玩一下扩展：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "G（跳过7，）加上9音、甚至加到11，都不错的；",
                                     "下一个C（不是最后结尾那个）加上7音效果很好！再加到9会更好？"
@@ -2551,7 +2551,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏特优美！最好用钢琴弹，吉它的话有点儿难？", LB,
@@ -2637,7 +2637,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "前奏可当尾奏用。"
                         }
                     }
@@ -2657,7 +2657,7 @@ const DATA =
                             "音域跨度蛮大的！最低的低至低音5；最高的高到高音2。如果算上前奏，得唱到高音3。", PB,
                             "找到个应该是原版的片头，右上角有字幕。有几处想讨论下：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     "缭：原版用“撩”。",
                                     "仍：原版居然是“忍”，怎么理解？",
@@ -2750,7 +2750,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "没想到居然有专辑版！", PB,
@@ -2843,7 +2843,7 @@ const DATA =
                         postscript: "几个2级和弦选得不错噢？将它的变种发挥得淋漓尽致" + EMOJI.HAPPY,
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏分两段，和弦有些相似，但是又有变化。", LB,
@@ -2920,7 +2920,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "主歌处听着有些沉闷噢？但和副歌的衔接处突然加速，耳朵一下子就被叫醒了吧？", LB,
@@ -2981,7 +2981,7 @@ const DATA =
                         postscript: "有半音的小节，要用大3，而不是小3。",
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "最后一句没有减速。", LB,
@@ -3047,7 +3047,7 @@ const DATA =
                         postscript: "……",
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "……", LB,
@@ -3115,7 +3115,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "前奏可当尾奏用，示范中简化了。"
                         }
                     },
@@ -3203,7 +3203,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "找到个2:20的音频，比电视剧版多了一遍副歌，可能就是完整版？", LB,
@@ -3271,7 +3271,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "因为旋律相同，前、尾奏比起原曲裁掉了一半。且暂时偷个懒，只用了俩琶音了事儿。" + EMOJI.AWKWARD, LB,
@@ -3343,7 +3343,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "参考邓小姐的版本来编的。", LB,
@@ -3364,7 +3364,7 @@ const DATA =
                             [TAG.J2C, "音乐指导老师"], "也有同感，并给出了几个修改方案。………………", PB,
                             "有几句歌词改了，有的需要说明下：",
                             [
-                                TAG.ul,
+                                TAG.UL,
                                 [
                                     [
                                         "“篱笆盛开几朵大红花”", LB,
@@ -3435,7 +3435,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment:
                             [
                                 "前奏很吸引人！", LB,
@@ -3524,7 +3524,7 @@ const DATA =
                 ],
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment:
                     [
                         "前奏が終わってから、テンポは速くなる。", LB,
@@ -3599,7 +3599,7 @@ const DATA =
                 postscript: "……",
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment:
                     [
                         "……", LB,
@@ -3654,7 +3654,7 @@ const DATA =
                 postscript: "A/Eはベース音を指定しなくてもいい。",
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment:
                     [
                         "前奏の最後における低音によって、GのかわりにAキーでアレンジした。", LB,
@@ -3731,13 +3731,13 @@ const DATA =
                 [
                     "全曲（前奏を含む）における1番目のコードがGのせいで、オリジナルがGキーでアレンジされたと勘違いをしていたが、" +
                     "Gにおいて、Aコードが一般的に使われないので、キーはDだ。", LB,
-                    "では同様に、Dに", [TAG.sup, ACCIDENTAL.P],
+                    "では同様に、Dに", [TAG.SUP, ACCIDENTAL.P],
                     "F7があるか？これはセカンダリー・ドミナント・コードで、コード進行をいい感じにアレンジする手法だ。", PB,
                     "ここで、前奏以外に新しいコードを付けて、原曲と異なる。"
                 ],
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment:
                     [
                         "弾き方の解説ビデオを何本か見たが、" +
@@ -3798,7 +3798,7 @@ const DATA =
                 ],
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment:
                     [
                         "前奏は本当にいいね！2つの基本コードでも美しいメロディーが作れるね" + EMOJI.SURPRISE, LB,
@@ -3875,7 +3875,7 @@ const DATA =
                 ],
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment: "オリジナルの間奏は後奏として使われている。"
                 }
             },
@@ -3917,7 +3917,7 @@ const DATA =
                 postscript: "増3和音は本曲で最も核心的だ！",
                 details:
                 {
-                    demo: TAG.video, // Ep8 19:51.3~20:35.9
+                    demo: TAG.VIDEO, // Ep8 19:51.3~20:35.9
                     comment:
                     [
                         "augコードが使われなかったらしい。", PB,
@@ -3990,7 +3990,7 @@ const DATA =
                 ],
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment:
                     [
                         "日本語より中国語の歌詞で歌ったほうがいいか？", LB,
@@ -4079,7 +4079,7 @@ const DATA =
                 postscript: "가장조의 코드가 어렵나요?",
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment: "솔로 편곡이 어렵네요."
                 }
             },
@@ -4133,7 +4133,7 @@ const DATA =
                 postscript: "가장조의 코드가 어렵나요?",
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment: "..."
                 }
             }
@@ -4214,12 +4214,12 @@ const DATA =
                         postscript:
                         [
                             "I wonder whether slash chords are used in Jazz music... It is said that they are called ",
-                            [TAG.q, "Upper Structures"], EMOJI.SURPRISE, PB,
+                            [TAG.Q, "Upper Structures"], EMOJI.SURPRISE, PB,
                             "At last, E7 was chosen instead of Em7. Is this the Modal Interchange (or Borrowed Chord) ?"
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "The melodies in the demo are similar to those in the original."
                         }
                     },
@@ -4228,8 +4228,8 @@ const DATA =
                         h2: "As Long as You Love Me",
                         preface:
                         [
-                            "There are linking-sounds /ʒju:/ in singing ", [TAG.q, "(... a)s you( ...)"],
-                            ". Why are not ", [TAG.q, "(... wha)t"], " & ", [TAG.q, "you( ...)"]," linked as /tʃju:/?"
+                            "There are linking-sounds /ʒju:/ in singing ", [TAG.Q, "(... a)s you( ...)"],
+                            ". Why are not ", [TAG.Q, "(... wha)t"], " & ", [TAG.Q, "you( ...)"]," linked as /tʃju:/?"
                         ],
                         section:
                         {
@@ -4295,7 +4295,7 @@ const DATA =
                         ],
                         details:
                         {
-                            demo: TAG.audio,
+                            demo: TAG.AUDIO,
                             comment: "The intro can be applied to an outro."
                         }
                     }
@@ -4352,7 +4352,7 @@ const DATA =
                 postscript: "...",
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment: "..."
                 }
             }
@@ -4428,7 +4428,7 @@ const DATA =
                 postscript: "...",
                 details:
                 {
-                    demo: TAG.audio,
+                    demo: TAG.AUDIO,
                     comment: "..."
                 }
             }
